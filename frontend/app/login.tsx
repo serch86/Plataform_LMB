@@ -9,10 +9,11 @@ import {
 import { layout, typography, colors } from "@/styles/theme";
 import { useRouter } from "expo-router";
 import { useGoogleAuth } from "@/lib/auth/google";
-import useUserStore from "@/store/useUserStore";
-import { useState } from "react";
+import { useUserStore } from "@/store/useUserStore";
+import { useState, useEffect } from "react";
+import * as Linking from "expo-linking";
 
-export default function LoginScreen() {
+export default function Page() {
   const router = useRouter();
   const setUser = useUserStore((s) => s.setUser);
   const setToken = useUserStore((s) => s.setToken);
@@ -20,6 +21,20 @@ export default function LoginScreen() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  useEffect(() => {
+    const handleUrl = async () => {
+      const url = await Linking.getInitialURL();
+      if (url) {
+        const parsed = Linking.parse(url);
+        const error = parsed.queryParams?.error;
+        if (error) setErrorMessage(decodeURIComponent(error));
+      }
+    };
+
+    handleUrl();
+  }, []);
 
   const handleEmailLogin = async () => {
     try {
@@ -53,6 +68,12 @@ export default function LoginScreen() {
     <View style={[layout.container, styles.centered]}>
       <View style={styles.card}>
         <Text style={[typography.heading, styles.title]}>Iniciar Sesión</Text>
+
+        {errorMessage && (
+          <Text style={{ color: "red", marginBottom: 12, textAlign: "center" }}>
+            {errorMessage}
+          </Text>
+        )}
 
         <TextInput
           placeholder="Correo electrónico"

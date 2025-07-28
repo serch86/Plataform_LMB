@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import Constants from "expo-constants";
 import { useRouter } from "expo-router";
 import { Alert } from "react-native";
-import useUserStore from "@/store/useUserStore";
-import { saveSession } from "@/lib/secureStore"; // ✅ guardar sesión completa
+import { useUserStore } from "@/store/useUserStore";
+import { saveSession } from "@/lib/secureStore";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -47,14 +47,14 @@ export function useGoogleAuth() {
           console.log("✅ JWT:", data.token);
           console.log("👤 Usuario:", data.user);
 
-          // ✅ Guardar sesión completa
+          // Guardar sesión completa
           saveSession(data.user, data.token);
 
-          // ✅ Estado global
+          // Estado global
           setUser(data.user);
           setToken(data.token);
 
-          // ✅ Ir al drawer
+          // Ir al drawer
           router.replace("/(drawer)/");
         })
         .catch((err) => {

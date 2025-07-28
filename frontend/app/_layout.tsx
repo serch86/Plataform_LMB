@@ -10,7 +10,7 @@ import {
 import { StatusBar } from "expo-status-bar";
 
 import { getSession } from "@/lib/secureStore";
-import useUserStore from "@/store/useUserStore";
+import { useUserStore } from "@/store/useUserStore";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function RootLayout() {

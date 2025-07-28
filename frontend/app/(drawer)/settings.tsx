@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { layout, typography, colors } from "@/styles/theme";
-import useUserStore from "@/store/useUserStore";
+import { useUserStore } from "@/store/useUserStore";
 
 export default function SettingsScreen() {
   const { preference, setColorScheme, colorScheme } = useColorScheme();
