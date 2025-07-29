@@ -13,16 +13,9 @@ import { getSession } from "@/lib/secureStore";
 import { useUserStore } from "@/store/useUserStore";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
-export default function RootLayout() {
+function useAppBootstrap() {
   const [booted, setBooted] = useState(false);
-  const colorScheme = useColorScheme();
-  const [fontsLoaded] = useFonts({
-    SpaceMono: require("@/assets/fonts/SpaceMono-Regular.ttf"),
-  });
-
-  const { token, setUser, setToken } = useUserStore();
-  const segments = useSegments();
-  const router = useRouter();
+  const { setUser, setToken } = useUserStore();
 
   useEffect(() => {
     const load = async () => {
@@ -37,10 +30,26 @@ export default function RootLayout() {
     load();
   }, []);
 
+  return booted;
+}
+
+export default function RootLayout() {
+  const booted = useAppBootstrap();
+  const colorScheme = useColorScheme();
+  const [fontsLoaded] = useFonts({
+    SpaceMono: require("@/assets/fonts/SpaceMono-Regular.ttf"),
+  });
+
+  const { token } = useUserStore();
+  const segments = useSegments();
+  const router = useRouter();
+
   useEffect(() => {
     if (!booted) return;
 
-    const inAuthGroup = segments[0] === "login";
+    const authRoutes = ["login"];
+    const currentSegment = segments[0] ?? "";
+    const inAuthGroup = authRoutes.includes(currentSegment);
 
     if (!token && !inAuthGroup) {
       router.replace("/login");
@@ -54,7 +63,7 @@ export default function RootLayout() {
   if (!booted || !fontsLoaded) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size="large" color="#666" />
       </View>
     );
   }
