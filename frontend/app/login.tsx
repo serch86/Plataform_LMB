@@ -12,55 +12,114 @@ import { useGoogleAuth } from "@/lib/auth/google";
 import { useUserStore } from "@/store/useUserStore";
 import { useState, useEffect } from "react";
 import * as Linking from "expo-linking";
+import { useTheme } from "@/ThemeContext";
+import { detectarGrupoDesdeCorreo } from "@/utils/detectarGrupo";
+import axios from "axios";
+
+// Ejemplo: usar una variable de entorno para la URL de la API
+const API_URL =
+  process.env.EXPO_PUBLIC_API_URL || "http://192.168.1.150:3000/api";
 
 export default function Page() {
   const router = useRouter();
   const setUser = useUserStore((s) => s.setUser);
   const setToken = useUserStore((s) => s.setToken);
   const { promptAsync } = useGoogleAuth();
+  const { setGrupo } = useTheme();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleUrl = async () => {
-      const url = await Linking.getInitialURL();
+    const handleUrl = async ({ url }: { url: string }) => {
       if (url) {
         const parsed = Linking.parse(url);
         const error = parsed.queryParams?.error;
-        if (error) setErrorMessage(decodeURIComponent(error));
+        if (error) setErrorMessage(decodeURIComponent(error as string));
       }
     };
 
-    handleUrl();
+    const subscription = Linking.addEventListener("url", handleUrl);
+
+    return () => {
+      subscription.remove();
+    };
   }, []);
 
   const handleEmailLogin = async () => {
+    if (!email || !password) {
+      Alert.alert("Error", "Correo y contraseña son obligatorios");
+      return;
+    }
+
     try {
-      const res = await fetch("http://192.168.100.8:3000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+      // Línea de diagnóstico: Imprime la URL antes de la llamada a la API
+      const url = `${API_URL}/auth/login`;
+      console.log("Intentando conectar a:", url);
+
+      const res = await axios.post(url, {
+        email,
+        password,
       });
 
-      if (!res.ok) throw new Error("Credenciales inválidas");
-
-      const { token, user } = await res.json();
+      const { token, user } = res.data;
       setUser(user);
       setToken(token);
+
+      const grupo = detectarGrupoDesdeCorreo(email);
+      setGrupo(grupo);
+
       router.replace("/(drawer)/inicio");
-    } catch (err) {
-      Alert.alert("Error", "No se pudo iniciar sesión");
+    } catch (err: any) {
+      console.error(
+        "Error al iniciar sesión con email:",
+        err.response?.data || err.message
+      );
+      Alert.alert(
+        "Error",
+        err.response?.data?.message || "No se pudo iniciar sesión"
+      );
     }
   };
 
   const handleGoogleLogin = async () => {
     const result = await promptAsync();
-    if (result?.type === "success") {
-      setUser({ name: "Demo User", email: "demo@example.com" });
-      setToken(result.authentication?.accessToken || "");
-      router.replace("(drawer)/inicio");
+
+    if (result.type === "success" && result.authentication) {
+      try {
+        const url = `${API_URL}/auth/google`;
+        console.log("Intentando conectar con Google a:", url);
+
+        const res = await axios.post(url, {
+          accessToken: result.authentication.accessToken,
+        });
+
+        const { token, user } = res.data;
+        setUser(user);
+        setToken(token);
+
+        const grupo = detectarGrupoDesdeCorreo(user.email);
+        setGrupo(grupo);
+
+        router.replace("/(drawer)/inicio");
+      } catch (err: any) {
+        console.error(
+          "Error al iniciar sesión con Google:",
+          err.response?.data || err.message
+        );
+        Alert.alert(
+          "Error",
+          err.response?.data?.message || "No se pudo iniciar sesión con Google"
+        );
+      }
+    } else if (result.type === "cancel") {
+      Alert.alert("Inicio de sesión cancelado", "El proceso fue cancelado.");
+    } else {
+      Alert.alert(
+        "Error",
+        "No se pudo completar el inicio de sesión con Google."
+      );
     }
   };
 

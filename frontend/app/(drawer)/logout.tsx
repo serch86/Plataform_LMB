@@ -1,3 +1,8 @@
+import { View } from "react-native";
+import { useTheme } from "@/ThemeContext";
+
 export default function LogoutScreen() {
-  return null;
+  const { theme: themeColors } = useTheme();
+
+  return <View style={{ flex: 1, backgroundColor: themeColors.background }} />;
 }

@@ -1,21 +1,16 @@
 import { useEffect, useState } from "react";
 import { View, ActivityIndicator } from "react-native";
 import { Slot, useRouter, useSegments } from "expo-router";
-import { useFonts } from "expo-font";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 
 import { getSession } from "@/lib/secureStore";
 import { useUserStore } from "@/store/useUserStore";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { ThemeProvider } from "@/ThemeContext"; // tu provider personalizado
 
+// Hook para cargar sesión del usuario y estado de suscripción
 function useAppBootstrap() {
   const [booted, setBooted] = useState(false);
-  const { setUser, setToken } = useUserStore();
+  const { setUser, setToken, loadSubscriptionStatus } = useUserStore();
 
   useEffect(() => {
     const load = async () => {
@@ -24,6 +19,8 @@ function useAppBootstrap() {
         setUser(session.user);
         setToken(session.token);
       }
+
+      await loadSubscriptionStatus();
       setBooted(true);
     };
 
@@ -33,14 +30,10 @@ function useAppBootstrap() {
   return booted;
 }
 
-export default function RootLayout() {
+export default function DrawerLayout() {
   const booted = useAppBootstrap();
-  const colorScheme = useColorScheme();
-  const [fontsLoaded] = useFonts({
-    SpaceMono: require("@/assets/fonts/SpaceMono-Regular.ttf"),
-  });
 
-  const { token } = useUserStore();
+  const { token, subscriptionStatus } = useUserStore();
   const segments = useSegments();
   const router = useRouter();
 
@@ -53,14 +46,23 @@ export default function RootLayout() {
 
     if (!token && !inAuthGroup) {
       router.replace("/login");
+      return;
     }
 
     if (token && inAuthGroup) {
       router.replace("/(drawer)/inicio");
+      return;
     }
-  }, [booted, token, segments]);
 
-  if (!booted || !fontsLoaded) {
+    const subsRoutes = ["suscripcion", "logout"];
+    const inSubsAllowed = subsRoutes.includes(currentSegment);
+
+    if (token && subscriptionStatus === "inactivo" && !inSubsAllowed) {
+      router.replace("/(drawer)/suscripcion");
+    }
+  }, [booted, token, subscriptionStatus, segments]);
+
+  if (!booted) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator size="large" color="#666" />
@@ -69,7 +71,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider>
       <Slot />
       <StatusBar style="auto" />
     </ThemeProvider>

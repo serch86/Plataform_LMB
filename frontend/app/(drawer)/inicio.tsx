@@ -1,15 +1,31 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { layout, typography, colors } from "@/styles/theme";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { layout } from "@/styles/theme";
+import { useRouter } from "expo-router";
+import { useTheme } from "@/ThemeContext";
+
+const logosPorGrupo: Record<string, any> = {
+  A: require("../../assets/images/diablos.png"),
+  B: require("../../assets/images/sultanes.png"),
+};
 
 export default function HomeScreen() {
-  const scheme = useColorScheme();
-  const themeColors = colors[scheme ?? "light"];
+  const router = useRouter();
+  const { grupo, theme: themeColors } = useTheme();
+
+  console.log("Grupo actual:", grupo);
 
   return (
     <View
       style={[layout.container, { backgroundColor: themeColors.background }]}
     >
+      {grupo && logosPorGrupo[grupo] && (
+        <Image
+          source={logosPorGrupo[grupo]}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+      )}
+
       <View style={[styles.badge, { backgroundColor: themeColors.badge }]}>
         <Text style={[styles.badgeText, { color: themeColors.badgeText }]}>
           Reportes de Béisbol Automatizados
@@ -17,7 +33,9 @@ export default function HomeScreen() {
       </View>
 
       <Text style={[styles.title, { color: themeColors.primary }]}>
-        Bienvenido al Panel del Equipo
+        {grupo === "B"
+          ? "Bienvenido al Panel – Sultanes de Monterrey"
+          : "Bienvenido al Panel del Equipo"}
       </Text>
 
       <Text style={[styles.subtitle, { color: themeColors.textSecondary }]}>
@@ -30,16 +48,19 @@ export default function HomeScreen() {
             styles.primaryButton,
             { backgroundColor: themeColors.primary },
           ]}
+          onPress={() => router.push("/(drawer)/reportes")}
         >
           <Text style={[styles.primaryButtonText, { color: "white" }]}>
             Ver Reportes
           </Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           style={[
             styles.secondaryButton,
             { borderColor: themeColors.textSecondary },
           ]}
+          onPress={() => router.push("/(drawer)/roster")}
         >
           <Text
             style={[
@@ -88,6 +109,12 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  logo: {
+    width: 100,
+    height: 100,
+    alignSelf: "center",
+    marginBottom: 16,
+  },
   badge: {
     alignSelf: "center",
     borderRadius: 16,

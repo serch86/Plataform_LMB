@@ -1,9 +1,12 @@
 import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+const SUBSCRIPTION_KEY = "subscription_status";
+
 export const useUserStore = create((set) => ({
   user: null,
   token: null,
+  subscriptionStatus: "inactivo", // valor por defecto
 
   setUser: (user) => set({ user }),
 
@@ -20,6 +23,13 @@ export const useUserStore = create((set) => ({
     }
   },
 
+  setSubscriptionStatus: (status) => {
+    set({ subscriptionStatus: status });
+    AsyncStorage.setItem(SUBSCRIPTION_KEY, status).catch((error) =>
+      console.error("Error al guardar estado de suscripción:", error)
+    );
+  },
+
   clearSession: () => {
     set({ user: null, token: null });
     AsyncStorage.removeItem("token").catch((error) =>
@@ -33,11 +43,20 @@ export const useUserStore = create((set) => ({
       if (storedToken) {
         set({ token: storedToken });
         console.log("Token cargado desde AsyncStorage.");
-      } else {
-        console.log("No se encontró token en AsyncStorage.");
       }
     } catch (error) {
       console.error("Error al cargar el token de AsyncStorage:", error);
+    }
+  },
+
+  loadSubscriptionStatus: async () => {
+    try {
+      const storedStatus = await AsyncStorage.getItem(SUBSCRIPTION_KEY);
+      if (storedStatus === "activo" || storedStatus === "inactivo") {
+        set({ subscriptionStatus: storedStatus });
+      }
+    } catch (error) {
+      console.error("Error al cargar estado de suscripción:", error);
     }
   },
 }));

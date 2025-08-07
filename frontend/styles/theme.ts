@@ -1,3 +1,28 @@
+// styles/theme.ts
+
+// Temas por grupo (este bloque es el que usa ThemeContext)
+export const temasPorGrupo = {
+  A: {
+    background: "#ffffff", // blanco
+    textPrimary: "#b91c1c", // rojo fuerte
+    textSecondary: "#991b1b", // rojo oscuro
+    primary: "#dc2626", // rojo
+    badge: "#b91c1c",
+    badgeText: "#ffffff",
+    card: "#fef2f2", // fondo suave rojizo
+  },
+  B: {
+    background: "#f9fafb", // blanco grisáceo
+    textPrimary: "#1e3a8a", // azul marino
+    textSecondary: "#4338ca", // azul vibrante
+    primary: "#facc15", // dorado
+    badge: "#1e3a8a",
+    badgeText: "#facc15",
+    card: "#e0e7ff", // azul muy claro
+  },
+};
+
+// Puedes conservar esto si lo usas en otras partes (opcional ahora)
 export const colors = {
   light: {
     background: "#ffffff",
@@ -19,6 +44,7 @@ export const colors = {
   },
 };
 
+// Layout base
 export const layout = {
   container: {
     flex: 1,
@@ -28,6 +54,7 @@ export const layout = {
   },
 };
 
+// Tipografía base
 export const typography = {
   heading: {
     fontSize: 24,
