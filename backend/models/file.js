@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: sequelize.literal("gen_random_uuid()"),
         primaryKey: true,
       },
-      drive_file_id: { type: DataTypes.STRING, allowNull: false },
       name: { type: DataTypes.STRING, allowNull: false },
       type: { type: DataTypes.STRING },
       uploaded_at: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },

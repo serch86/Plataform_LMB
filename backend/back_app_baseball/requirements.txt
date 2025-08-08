@@ -1,0 +1,7 @@
+Pillow
+openpyxl
+xlrd
+PyPDF2
+pandas
+numpy
+pdfplumber

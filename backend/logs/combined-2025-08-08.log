@@ -1,0 +1,5 @@
+{"level":"info","message":"POST /api/auth/login","service":"backend-service","timestamp":"2025-08-08 05:05:43"}
+{"level":"info","message":"Inicializando Passport","service":"backend-service","timestamp":"2025-08-08 05:05:43"}
+{"level":"info","message":"Montando rutas en /api","service":"backend-service","timestamp":"2025-08-08 05:05:43"}
+{"level":"info","message":"Login start: test@example.com","service":"backend-service","timestamp":"2025-08-08 05:05:43"}
+{"level":"info","message":"Login success: test@example.com","service":"backend-service","timestamp":"2025-08-08 05:05:43"}

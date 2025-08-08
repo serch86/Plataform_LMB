@@ -7,7 +7,7 @@ router.get("/", authMiddleware, fileController.listFiles);
 
 router.post("/", authMiddleware, fileController.uploadFileRecord);
 
-router.get("/view/:driveFileId", authMiddleware, fileController.viewDriveFile);
+//router.get("/view/:driveFileId", authMiddleware, fileController.viewDriveFile);
 
 router.delete("/:id", authMiddleware, fileController.deleteFile);
 

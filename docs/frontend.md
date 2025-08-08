@@ -1,141 +1,231 @@
+# Aplicación Móvil Privada – Resumen
+
+## Objetivo
+
+Permitir a equipos y staff consultar, filtrar y escanear información de reportes desde dispositivos móviles.
+
+## Características Clave
+
+- Autenticación por equipo
+- Visualización y filtrado de reportes descargados
+- Capacidad offline total
+- Escaneo de alineaciones en papel (OCR)
+- Gestión de suscripciones (Stripe, MercadoPago)
+- Branding dinámico por equipo (logo, colores)
+- Sincronización con backend y almacenamiento seguro local
+
+## Funciones Destacadas
+
+- Login seguro (Google OAuth / Email)
+- OCR desde cámara compatible offline (Google ML Kit)
+- Filtro interactivo para mostrar solo jugadores activos
+- Almacenamiento seguro en dispositivo
+
+## Tecnologías
+
+- **Frontend móvil:** React Native (Expo)
+- **Estado global:** Zustand v5
+- **Navegación:** Expo Router
+- **Comunicación backend:** Axios
+- **Autenticación:** JWT + OAuth (Google)
+- **OCR:** Google ML Kit (offline)
+- **Pagos:** Stripe, MercadoPago
+- **Opcional:** Firebase (auth, almacenamiento local)
+
+---
+
 # Planificación del Frontend – Proyecto OCR + Matching
 
 ## Objetivo
 
-Desarrollar una interfaz móvil/web que permita a los usuarios autenticarse, subir documentos (imagen, PDF o Excel), recibir resultados del procesamiento OCR y visualizar coincidencias con la base de datos de jugadores/equipos.
+Desarrollar una interfaz móvil/web que permita:
 
----
-
-## Tecnologías
-
-- **React Native (Expo)**: App móvil (iOS/Android)
-- **Expo Router**: Navegación basada en estructura de archivos (`app/`)
-- **Axios**: Comunicación con backend
-- **Zustand**: Estado global (usuario, token, resultados)
-- **JWT + OAuth (Google)**: Autenticación
+1. Autenticarse
+2. Subir documentos (imagen, PDF, Excel)
+3. Recibir y visualizar resultados de OCR con coincidencias en la base de datos
 
 ---
 
 ## Estructura de Pantallas
 
-### 1. Pantalla de Inicio
+### 1. Inicio
 
 - Botones: “Iniciar sesión con Google” / “Acceder con Email”
-- Redirección tras login exitoso
+- Redirección tras login
 
-### 2. Pantalla Principal
+### 2. Principal
 
-- Botón para subir documento (imagen, PDF o Excel)
-- Vista previa del archivo cargado
+- Subida de documento
+- Vista previa del archivo
 - Botón “Procesar”
 
-### 3. Pantalla de Resultados
+### 3. Resultados
 
-- Lista de nombres detectados por OCR
-- Indicador de coincidencia (encontrado / no encontrado)
-- Detalles (jugador, equipo, estadísticas)
+- Lista de nombres detectados
+- Indicador de coincidencia
+- Detalles por jugador/equipo
 
-### 4. Pantalla de Historial
+### 4. Historial
 
-- Lista de documentos cargados anteriormente
+- Lista de documentos previos
 - Estado del procesamiento
 - Acceso a resultados anteriores
 
-### 5. Pantalla de Perfil / Configuración
+### 5. Perfil / Configuración
 
-- Información del usuario
+- Datos del usuario
 - Cierre de sesión
-- Idioma, preferencias
+- Preferencias (idioma, tema)
 
 ---
 
 ## Flujo General
 
-[Login] → [Subida de archivo] → [Procesamiento OCR y Matching] → [Visualización de resultados]
-
----
+`[Login] → [Subida de archivo] → [Procesamiento OCR + Matching] → [Visualización de resultados]`
 
 ---
 
 ## Módulos Clave
 
-1. **Autenticación**
+### 1. Autenticación
 
-   - Login con Google
-   - JWT persistente
-   - Middleware de protección en frontend
+- Google OAuth
+- JWT persistente
+- Middleware de protección
 
-2. **Subida de Archivos**
+### 2. Subida de Archivos
 
-   - Selector de archivo (imagen, PDF, Excel)
-   - Vista previa
-   - Envío al backend
+- Document picker (imagen, PDF, Excel)
+- Vista previa
+- Envío al backend vía `axios`
 
-3. **Procesamiento y Visualización**
+### 3. Procesamiento y Visualización
 
-   - Indicadores de carga o estado
-   - Mostrar resultados OCR y coincidencias
-   - Acciones sobre cada resultado (ver más)
+- Indicadores de carga
+- Lista OCR + coincidencias
+- Acciones sobre resultados
 
-4. **Gestión de Usuario**
+### 4. Gestión de Usuario
 
-   - Perfil
-   - Cierre de sesión
-   - Cambio de idioma (opcional)
+- Perfil y cierre de sesión
+- Configuración
 
-5. **Historial de Procesos**
+### 5. Historial
 
-   - Lista de cargas pasadas
-   - Acceso a resultados antiguos
+- Documentos previos y resultados
 
 ---
 
-## Seguridad y Experiencia de Usuario
+## Seguridad y UX
 
-- Validación de archivos antes de subir
-- Feedback visual (toast/snackbar) para errores o confirmaciones
-- Manejo de token vencido
-- Redirección automática si no hay sesión activa
+- Validación previa de archivos
+- Feedback visual (toast/snackbar)
+- Manejo de expiración de token
+- Redirección automática si no hay sesión
 
 ---
 
-## Estado Global con Zustand
+## Estado Global (Zustand)
 
-### Archivo: `store/useUserStore.js`
+**Archivo:** `store/useUserStore.js`
 
-Se implementó un store para manejar el estado de sesión del usuario:
-
-- `user`: datos del usuario autenticado.
-- `token`: token JWT activo.
-- `setUser(user)`: guarda los datos del usuario.
-- `setToken(token)`: guarda el token JWT.
-- `clearSession()`: cierra sesión limpiando el estado.
+- `user`: datos del usuario
+- `token`: JWT activo
+- `setUser(user)`: guarda usuario
+- `setToken(token)`: guarda token
+- `clearSession()`: limpia sesión
 
 ---
 
 ## Integración con Pantallas
 
-### app/login.tsx
-
-- Al iniciar sesión, se usan `setUser` y `setToken` para guardar un usuario y token simulados.
-- Luego se redirige a `(tabs)/` usando `router.replace('(tabs)')`.
-
-### app/(tabs)/index.tsx
-
-- Accede al estado actual del usuario y token desde el store.
-- Muestra el nombre del usuario autenticado y su correo.
-- Cerrar sesión ejecuta `clearSession()` y se redirige a `/login`.
+- **login.tsx**: guarda `user` y `token` al iniciar sesión, redirige a `(tabs)/`
+- **index.tsx**: muestra datos del usuario y permite cerrar sesión
+- **upload.tsx**: selecciona archivo, muestra datos, pendiente integración backend
 
 ---
 
-### app/(tabs)/upload.tsx
+## Tema y Personalización
 
-- Usa `expo-document-picker` para permitir seleccionar archivos:
-  - Imágenes (`image/*`)
-  - PDFs (`application/pdf`)
-  - Excel (`.xlsx`)
-- Al seleccionar un archivo, muestra:
-  - Nombre del archivo
-  - Tamaño
-  - Tipo MIME
-- Pendiente integración con backend para envío del archivo con `axios`
+- `utils/detectarGrupo.ts`: define grupo según email
+- `ThemeContext.tsx`: contexto de tema por grupo
+- `styles/theme.ts`: colores por grupo
+- `inicio.tsx`: aplica tema y logo
+- `_layout.tsx`: envuelve con `ThemeProvider`
+
+---
+
+## Documentacion de arquitectura
+
+frontend
+│
+├── .expo/
+│
+├── app/ Pantallas y navegación principal
+│ ├── (drawer)/ Layout y vistas del drawer
+│ │ ├── \_layout.tsx
+│ │ ├── inicio.tsx
+│ │ ├── logout.tsx
+│ │ ├── reportes.tsx
+│ │ ├── settings.tsx
+│ │ ├── suscripcion.tsx
+│ │ └── SubirRoster.tsx
+│ │
+│ ├── \_layout.tsx Layout raíz
+│ ├── +not-found.tsx Pantalla 404
+│ └── login.tsx Login y guardado de sesión
+│
+├── assets/ Recursos estáticos
+│ ├── fonts/
+│ └── images/
+│
+├── components/ Componentes reutilizables
+│ ├── ui/ Componentes de UI base
+│ │ ├── iconSymbol.ios.tsx
+│ │ ├── IconSymboltsx
+│ │ ├── TabBarBackgroud.ios.tsx
+│ │ └── TabBarBackground.tsx
+│ │
+│ ├── Collapsible.tsx
+│ ├── ExternalLink.tsx
+│ ├── HapticTab.tsx
+│ ├── HelloWave.tsx
+│ ├── ParallaxScrollView.tsx
+│ ├── ThemedText.tsx
+│ └── ThemedView.tsx
+│
+├── constants/ Constantes globales
+│ └── Colors.ts
+│
+├── hooks/ Hooks personalizados
+│ ├── useColorSheme.tsx
+│ ├── useColorSheme.web.tsx
+│ └── useThemeColor.tsx
+│
+├── lib/ Funciones de negocio o integración
+│ ├── auth/ Autenticación
+│ │ ├── google.ts
+│ │ └── logout.ts
+│ └── secureStore.ts Manejo seguro de sesión
+│
+├── node_modules/
+│
+├── scripts/ Scripts utilitarios
+│ └── reset-project.js
+│
+├── store/ Estado global (Zustand)
+│ └── useUserStore.js
+│
+├── styles/ Estilos globales
+│ └── theme.ts
+│
+├── utils/ Utilidades varias
+│ └── detectarGrupo.ts
+│
+├── app.json Configuración Expo
+├── eslint.config.js Configuración ESLint
+├── expo-env.d.ts Tipos de entorno Expo
+├── package-lock.json
+├── package.json
+├── ThemeContext.tsx Contexto de tema
+└── tsconfig.json Configuración TypeScript
