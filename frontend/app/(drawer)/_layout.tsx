@@ -8,7 +8,6 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 
-// Componente personalizado para la parte inferior del cajón de navegación
 function CustomDrawerFooter(props: any) {
   const router = useRouter();
   const { theme } = useTheme();
@@ -29,7 +28,6 @@ function CustomDrawerFooter(props: any) {
   );
 }
 
-// Componente principal del cajón de navegación
 function CustomDrawerContent(props: any) {
   return (
     <View style={{ flex: 1 }}>
@@ -48,6 +46,7 @@ export default function DrawerLayout() {
     <Drawer
       screenOptions={{
         drawerActiveTintColor: theme.primary,
+        drawerLabelStyle: { fontWeight: "600" },
       }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
@@ -74,6 +73,6 @@ const styles = StyleSheet.create({
   logoutText: {
     marginLeft: 16,
     fontSize: 16,
-    fontWeight: "500",
+    fontWeight: "600",
   },
 });

@@ -91,9 +91,9 @@ export default function ReportesScreen() {
       <Text style={[styles.tableTitle, { color: themeColors.primary }]}>
         Roster
       </Text>
-      {roster.map((row) => (
-        <View key={row.id} style={styles.tableRow}>
-          <Text style={[styles.cell, { flex: 1 }]}>{row.id}</Text>
+      {roster.map((row, index) => (
+        <View key={row.id ?? index} style={styles.tableRow}>
+          <Text style={[styles.cell, { flex: 1 }]}>{row.id ?? index}</Text>
           <Text style={[styles.cell, { flex: 3 }]}>{row.raw_name}</Text>
           <Text style={[styles.cell, { flex: 2 }]}>{row.position}</Text>
         </View>

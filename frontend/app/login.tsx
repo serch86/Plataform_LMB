@@ -15,10 +15,12 @@ import * as Linking from "expo-linking";
 import { useTheme } from "@/ThemeContext";
 import { detectarGrupoDesdeCorreo } from "@/utils/detectarGrupo";
 import axios from "axios";
+import Constants from "expo-constants";
 
-// Ejemplo: usar una variable de entorno para la URL de la API
+// URL base de la API, tomada de app.json (extra)
 const API_URL =
-  process.env.EXPO_PUBLIC_API_URL || "http://192.168.1.150:3000/api";
+  Constants.expoConfig?.extra?.EXPO_PUBLIC_API_URL ||
+  "http://192.168.1.150:3000/api";
 
 export default function Page() {
   const router = useRouter();
@@ -54,7 +56,6 @@ export default function Page() {
     }
 
     try {
-      // Línea de diagnóstico: Imprime la URL antes de la llamada a la API
       const url = `${API_URL}/auth/login`;
       console.log("Intentando conectar a:", url);
 

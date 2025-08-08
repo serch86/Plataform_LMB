@@ -7,12 +7,12 @@ import { ThemedView } from "@/components/ThemedView";
 // Pantalla para rutas no encontradas (404)
 export default function NotFoundScreen() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       {/* Título visible en la cabecera */}
       <Stack.Screen options={{ title: "Oops!" }} />
 
       {/* Contenido principal */}
-      <ThemedView style={styles.container}>
+      <ThemedView style={styles.content}>
         <ThemedText type="title">This screen does not exist.</ThemedText>
 
         {/* Enlace para volver a la pantalla principal */}
@@ -26,6 +26,9 @@ export default function NotFoundScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1, // Ocupa toda la pantalla
+  },
+  content: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",

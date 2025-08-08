@@ -5,9 +5,8 @@ import { StatusBar } from "expo-status-bar";
 
 import { getSession } from "@/lib/secureStore";
 import { useUserStore } from "@/store/useUserStore";
-import { ThemeProvider } from "@/ThemeContext"; // tu provider personalizado
+import { ThemeProvider, useTheme } from "@/ThemeContext";
 
-// Hook para cargar sesión del usuario y estado de suscripción
 function useAppBootstrap() {
   const [booted, setBooted] = useState(false);
   const { setUser, setToken, loadSubscriptionStatus } = useUserStore();
@@ -19,11 +18,9 @@ function useAppBootstrap() {
         setUser(session.user);
         setToken(session.token);
       }
-
       await loadSubscriptionStatus();
       setBooted(true);
     };
-
     load();
   }, []);
 
@@ -32,7 +29,6 @@ function useAppBootstrap() {
 
 export default function DrawerLayout() {
   const booted = useAppBootstrap();
-
   const { token, subscriptionStatus } = useUserStore();
   const segments = useSegments();
   const router = useRouter();
@@ -44,20 +40,14 @@ export default function DrawerLayout() {
     const currentSegment = segments[0] ?? "";
     const inAuthGroup = authRoutes.includes(currentSegment);
 
-    if (!token && !inAuthGroup) {
-      router.replace("/login");
-      return;
-    }
-
-    if (token && inAuthGroup) {
-      router.replace("/(drawer)/inicio");
-      return;
-    }
-
     const subsRoutes = ["suscripcion", "logout"];
     const inSubsAllowed = subsRoutes.includes(currentSegment);
 
-    if (token && subscriptionStatus === "inactivo" && !inSubsAllowed) {
+    if (!token && !inAuthGroup) {
+      router.replace("/login");
+    } else if (token && inAuthGroup) {
+      router.replace("/(drawer)/inicio");
+    } else if (token && subscriptionStatus === "inactivo" && !inSubsAllowed) {
       router.replace("/(drawer)/suscripcion");
     }
   }, [booted, token, subscriptionStatus, segments]);
@@ -72,8 +62,17 @@ export default function DrawerLayout() {
 
   return (
     <ThemeProvider>
+      <InnerApp />
+    </ThemeProvider>
+  );
+}
+
+function InnerApp() {
+  const { theme } = useTheme();
+  return (
+    <>
       <Slot />
       <StatusBar style="auto" />
-    </ThemeProvider>
+    </>
   );
 }
