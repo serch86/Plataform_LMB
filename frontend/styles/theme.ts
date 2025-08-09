@@ -1,28 +1,28 @@
 // styles/theme.ts
 
-// Temas por grupo (este bloque es el que usa ThemeContext)
+// Temas por grupo (usado por ThemeContext)
 export const temasPorGrupo = {
   A: {
-    background: "#ffffff", // blanco
-    textPrimary: "#b91c1c", // rojo fuerte
-    textSecondary: "#991b1b", // rojo oscuro
-    primary: "#dc2626", // rojo
+    background: "#ffffff",
+    textPrimary: "#b91c1c",
+    textSecondary: "#991b1b",
+    primary: "#dc2626",
     badge: "#b91c1c",
     badgeText: "#ffffff",
-    card: "#fef2f2", // fondo suave rojizo
+    card: "#fef2f2",
   },
   B: {
-    background: "#f9fafb", // blanco grisáceo
-    textPrimary: "#1e3a8a", // azul marino
-    textSecondary: "#4338ca", // azul vibrante
-    primary: "#facc15", // dorado
+    background: "#f9fafb",
+    textPrimary: "#1e3a8a",
+    textSecondary: "#4338ca",
+    primary: "#facc15",
     badge: "#1e3a8a",
     badgeText: "#facc15",
-    card: "#e0e7ff", // azul muy claro
+    card: "#e0e7ff",
   },
 };
 
-// Puedes conservar esto si lo usas en otras partes (opcional ahora)
+// Paleta base
 export const colors = {
   light: {
     background: "#ffffff",
@@ -32,6 +32,11 @@ export const colors = {
     badge: "#1e1e1e",
     badgeText: "#d1fae5",
     card: "#ffffff",
+    // nuevos tokens
+    surface: "#ffffff",
+    inputBg: "#f0f0f0",
+    textMuted: "#888888",
+    divider: "#cccccc",
   },
   dark: {
     background: "#1f1f1f",
@@ -41,6 +46,11 @@ export const colors = {
     badge: "#2c2c2c",
     badgeText: "#a7f3d0",
     card: "#2a2a2a",
+    // nuevos tokens
+    surface: "#2a2a2a",
+    inputBg: "#2b2b2b",
+    textMuted: "#A1A1AA",
+    divider: "#3f3f46",
   },
 };
 

@@ -48,7 +48,7 @@ interface PythonMetadata {
 }
 
 const API_URL =
-  process.env.EXPO_PUBLIC_API_URL || "http://192.168.1.150:3000/api";
+  process.env.EXPO_PUBLIC_API_URL || "http://192.168.100.8:3000/api";
 
 export default function UploadScreen() {
   const [file, setFile] = useState<DocumentPicker.DocumentPickerAsset | null>(

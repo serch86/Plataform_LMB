@@ -432,3 +432,65 @@
 2025-08-07 06:30:16,955 INFO ✗ Sin match para: 'PARIS CANO' (score máx: 69.6)
 2025-08-07 06:30:16,957 INFO ✗ Sin match para: 'ERICK VAZQUEZ' (score máx: 72.0)
 2025-08-07 06:30:16,957 INFO Procesamiento completado: 49 coincidencias evaluadas
+2025-08-09 02:47:51,572 INFO Procesando archivo: 1754729270888_ROSTER%20MVA%2010-JULIO-2025.xlsx
+2025-08-09 02:47:51,572 INFO Detectado archivo Excel
+2025-08-09 02:47:51,572 INFO Cargando hoja 'Roster' desde Excel...
+2025-08-09 02:47:51,676 WARNING Falló la carga directa: Worksheet named 'Roster' not found, intentando extraer por secciones...
+2025-08-09 02:47:51,676 INFO Buscando secciones en archivo: /home/yael/Desktop/proyectos_web/baseball/Plataform_LMB/backend/uploads/1754729270888_ROSTER%20MVA%2010-JULIO-2025.xlsx
+2025-08-09 02:47:51,704 INFO Sección detectada: catchers con 3 filas
+2025-08-09 02:47:51,708 INFO Sección detectada: infielders con 7 filas
+2025-08-09 02:47:51,711 INFO Sección detectada: outfielders con 5 filas
+2025-08-09 02:47:51,716 INFO Sección detectada: pitchers con 34 filas
+2025-08-09 02:47:51,716 INFO Cargando nombres de Trackman desde: /home/yael/Desktop/proyectos_web/baseball/Plataform_LMB/backend/services/python_scripts/nombres_trackman.csv
+2025-08-09 02:47:51,720 INFO 768 nombres cargados desde Trackman
+2025-08-09 02:47:51,720 INFO Buscando coincidencias entre 49 nombres de roster y Trackman...
+2025-08-09 02:47:51,723 INFO ✓ Match: 'FERNANDO FLORES' ≈ 'fernando flores' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,725 INFO ✗ Sin match para: 'LOGAN MOORE' (score máx: 72.0)
+2025-08-09 02:47:51,726 INFO ✓ Match: 'SANTIAGO CHAVEZ' ≈ 'santiago chavez' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,726 INFO ✓ Match: 'ADDISON RUSSELL' ≈ 'addison russell' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,726 INFO ✓ Match: 'ALDREM CORREDOR' ≈ 'aldrem corredor' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,727 INFO ✓ Match: 'BALBINO FUENMAYOR' ≈ 'balbino fuenmayor' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,727 INFO ✓ Match: 'ELVIN CARRILLO' ≈ 'elvin carrillo' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,727 INFO ✓ Match: 'JOSE PERAZA' ≈ 'jose peraza' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,728 INFO ✓ Match: 'KENNYS VARGAS' ≈ 'kennys vargas' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,728 INFO ✓ Match: 'RODOLFO AMADOR' ≈ 'rodolfo amador' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,731 INFO ✗ Sin match para: 'BRAULIO CAVERO' (score máx: 69.0)
+2025-08-09 02:47:51,731 INFO ✓ Match: 'BRYAN CORRAL' ≈ 'bryan corral' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,732 INFO ✓ Match: 'JECKSSON FLORES' ≈ 'jecksson flores' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,734 INFO ✗ Sin match para: 'JUAN MORA' (score máx: 69.6)
+2025-08-09 02:47:51,734 INFO ✓ Match: 'MAGNEURIS SIERRA' ≈ 'magneuris sierra' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,734 INFO ✓ Match: 'ANDERSON SEVERINO' ≈ 'anderson severino' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,735 INFO ✓ Match: 'ANEUDY CORTORREAL' ≈ 'aneudy cortorreal' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,735 INFO ✓ Match: 'AUSTIN WARNER' ≈ 'austin warner' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,736 INFO ✓ Match: 'BRADY MILLER' ≈ 'brady miller' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,738 INFO ✗ Sin match para: 'CHAVEZ FERNANDER' (score máx: 71.0)
+2025-08-09 02:47:51,738 INFO ✓ Match: 'CHRIS MULLER' ≈ 'chris muller' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,739 INFO ✓ Match: 'CHRISTHIAN YOUNG' ≈ 'christian young' → 96.8 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,739 INFO ✓ Match: 'ESTALIN ORTIZ' ≈ 'estalin ortiz' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,740 INFO ✓ Match: 'FRANCISCO MORALES' ≈ 'francisco morales' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,740 INFO ✓ Match: 'JORGE RODRIGUEZ' ≈ 'jorge rodriguez' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,740 INFO ✓ Match: 'LUIS REYES' ≈ 'luis reyes' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,741 INFO ✓ Match: 'MARK SIMON' ≈ 'mark simon' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,741 INFO ✓ Match: 'OSCAR SORIA' ≈ 'oscar soria' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,743 INFO ✗ Sin match para: 'ROLANDO MORA' (score máx: 75.0)
+2025-08-09 02:47:51,746 INFO ✗ Sin match para: 'RUBEN ALANIZ' (score máx: 69.6)
+2025-08-09 02:47:51,746 INFO ✓ Match: 'RYLEY GILLIAM' ≈ 'ryley gilliam' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,747 INFO ✓ Match: 'WILMER RIOS' ≈ 'wilmer rios' → 100.0 (rapidfuzz.ratio (normalizado))
+2025-08-09 02:47:51,749 INFO ✗ Sin match para: 'CUERPO TÉCNICO' (score máx: 59.3)
+2025-08-09 02:47:51,752 INFO ✗ Sin match para: 'JUAN GABRIEL CASTRO' (score máx: 75.0)
+2025-08-09 02:47:51,755 INFO ✗ Sin match para: 'MARTIN ARZATE' (score máx: 66.7)
+2025-08-09 02:47:51,758 INFO ✗ Sin match para: 'RICHARD PAZ' (score máx: 72.0)
+2025-08-09 02:47:51,760 INFO ✗ Sin match para: 'ARTURO GONZALEZ' (score máx: 75.9)
+2025-08-09 02:47:51,763 INFO ✗ Sin match para: 'LUIS CASTILLO' (score máx: 88.0)
+2025-08-09 02:47:51,765 INFO ✗ Sin match para: 'JUAN CARLOS H. BARANDICA' (score máx: 82.9)
+2025-08-09 02:47:51,767 INFO ✗ Sin match para: 'IKER FRANCO' (score máx: 66.7)
+2025-08-09 02:47:51,769 INFO ✗ Sin match para: 'CARLOS RODRIGUEZ' (score máx: 81.2)
+2025-08-09 02:47:51,771 INFO ✗ Sin match para: 'ANDRES FLORES' (score máx: 76.9)
+2025-08-09 02:47:51,774 INFO ✗ Sin match para: 'JOSE LUIS NUÑEZ' (score máx: 66.7)
+2025-08-09 02:47:51,776 INFO ✗ Sin match para: 'JORGE ARREDONDO' (score máx: 80.0)
+2025-08-09 02:47:51,779 INFO ✗ Sin match para: 'MIGUEL MENA' (score máx: 81.8)
+2025-08-09 02:47:51,781 INFO ✗ Sin match para: 'MARIO PALAZUELOS' (score máx: 62.1)
+2025-08-09 02:47:51,783 INFO ✗ Sin match para: 'DANTE LUGO' (score máx: 60.9)
+2025-08-09 02:47:51,785 INFO ✗ Sin match para: 'PARIS CANO' (score máx: 69.6)
+2025-08-09 02:47:51,787 INFO ✗ Sin match para: 'ERICK VAZQUEZ' (score máx: 72.0)
+2025-08-09 02:47:51,787 INFO Procesamiento completado: 49 coincidencias evaluadas

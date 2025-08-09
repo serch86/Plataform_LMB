@@ -3,12 +3,14 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start",
+    "start": "env-cmd -f .env.development expo start",
+    "start:prod": "env-cmd -f .env.production expo start --config app.config.ts",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "expo lint"
+    "android": "env-cmd -f .env.development expo start --android --config app.config.ts",
+    "ios": "env-cmd -f .env.development expo start --ios --config app.config.ts",
+    "web": "env-cmd -f .env.development expo start --web --config app.config.ts",
+    "lint": "expo lint",
+    "build": "env-cmd -f .env.production expo build"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -19,6 +21,7 @@
     "@react-navigation/native": "^7.1.14",
     "@react-navigation/native-stack": "^7.3.21",
     "axios": "^1.10.0",
+    "dotenv": "^17.2.1",
     "expo": "53.0.20",
     "expo-auth-session": "~6.2.1",
     "expo-blur": "~14.1.5",
@@ -51,6 +54,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "env-cmd": "^10.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "typescript": "~5.8.3"

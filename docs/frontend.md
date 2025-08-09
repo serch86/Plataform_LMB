@@ -186,6 +186,7 @@ frontend
 │ │ ├── TabBarBackgroud.ios.tsx
 │ │ └── TabBarBackground.tsx
 │ │
+│ ├── AuthGate.tsx
 │ ├── Collapsible.tsx
 │ ├── ExternalLink.tsx
 │ ├── HapticTab.tsx
@@ -198,14 +199,20 @@ frontend
 │ └── Colors.ts
 │
 ├── hooks/ Hooks personalizados
+│ ├── useLogin.ts
 │ ├── useColorSheme.tsx
 │ ├── useColorSheme.web.tsx
 │ └── useThemeColor.tsx
 │
 ├── lib/ Funciones de negocio o integración
 │ ├── auth/ Autenticación
+│ │ ├── errors/
+│ │ │ └── auth.js
+│ │ ├── session.ts
 │ │ ├── google.ts
 │ │ └── logout.ts
+│ ├── config.ts
+│ ├── api.ts Esto unifica el cliente HTTP y evita repetir la URL y headers en cada llamada
 │ └── secureStore.ts Manejo seguro de sesión
 │
 ├── node_modules/
@@ -220,6 +227,7 @@ frontend
 │ └── theme.ts
 │
 ├── utils/ Utilidades varias
+│ ├── validation.ts
 │ └── detectarGrupo.ts
 │
 ├── app.json Configuración Expo
@@ -229,3 +237,23 @@ frontend
 ├── package.json
 ├── ThemeContext.tsx Contexto de tema
 └── tsconfig.json Configuración TypeScript
+
+Usamos EAS Secrets para almacenar y gestionar variables sensibles de forma segura, evitando que claves privadas se expongan en el cliente o repositorios.
+
+Las variables de entorno se pueden gestionar manualmente creando archivos .env específicos para cada entorno (por ejemplo, .env.development y .env.production). Estos archivos deben ser cargados localmente durante el desarrollo y usados para configurar las builds de forma manual.
+
+Para producción, se recomienda reemplazar las variables en el archivo app.config.ts o usar scripts personalizados que inyecten las variables antes de compilar, asegurando que las claves sensibles no se expongan en el código fuente ni en el cliente.
+
+Se definen perfiles de build en eas.json para cada entorno (desarrollo, staging, producción). Cada perfil especifica las variables de entorno que se inyectarán durante la compilación, permitiendo construir versiones configuradas según el ambiente deseado. Se selecciona el perfil con el comando eas build --profile <perfil>.
+
+Entendido, no usarás servicios externos ni EAS Secrets.
+
+En ese caso:
+
+Gestiona manualmente los .env locales.
+
+Configura scripts para cargar variables según entorno (dev/prod).
+
+Asegúrate de no subir secretos privados al repositorio.
+
+Controla el reemplazo o configuración manual en cada build.

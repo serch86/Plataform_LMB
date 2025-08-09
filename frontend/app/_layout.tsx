@@ -6,6 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import { getSession } from "@/lib/secureStore";
 import { useUserStore } from "@/store/useUserStore";
 import { ThemeProvider, useTheme } from "@/ThemeContext";
+import AuthGate from "@/components/AuthGate";
 
 function useAppBootstrap() {
   const [booted, setBooted] = useState(false);
@@ -27,7 +28,7 @@ function useAppBootstrap() {
   return booted;
 }
 
-export default function DrawerLayout() {
+export default function RootLayout() {
   const booted = useAppBootstrap();
   const { token, subscriptionStatus } = useUserStore();
   const segments = useSegments();
@@ -36,16 +37,13 @@ export default function DrawerLayout() {
   useEffect(() => {
     if (!booted) return;
 
-    const authRoutes = ["login"];
     const currentSegment = segments[0] ?? "";
-    const inAuthGroup = authRoutes.includes(currentSegment);
+    const inAuthGroup = currentSegment === "login";
+    const inSubsAllowed =
+      currentSegment === "suscripcion" || currentSegment === "logout";
 
-    const subsRoutes = ["suscripcion", "logout"];
-    const inSubsAllowed = subsRoutes.includes(currentSegment);
-
-    if (!token && !inAuthGroup) {
-      router.replace("/login");
-    } else if (token && inAuthGroup) {
+    // AuthGate se encarga de redirigir a /login si no hay token.
+    if (token && inAuthGroup) {
       router.replace("/(drawer)/inicio");
     } else if (token && subscriptionStatus === "inactivo" && !inSubsAllowed) {
       router.replace("/(drawer)/suscripcion");
@@ -62,7 +60,9 @@ export default function DrawerLayout() {
 
   return (
     <ThemeProvider>
-      <InnerApp />
+      <AuthGate>
+        <InnerApp />
+      </AuthGate>
     </ThemeProvider>
   );
 }

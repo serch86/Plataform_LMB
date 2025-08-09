@@ -4,125 +4,21 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
-  Alert,
 } from "react-native";
 import { layout, typography, colors } from "@/styles/theme";
-import { useRouter } from "expo-router";
-import { useGoogleAuth } from "@/lib/auth/google";
-import { useUserStore } from "@/store/useUserStore";
-import { useState, useEffect } from "react";
-import * as Linking from "expo-linking";
-import { useTheme } from "@/ThemeContext";
-import { detectarGrupoDesdeCorreo } from "@/utils/detectarGrupo";
-import axios from "axios";
-import Constants from "expo-constants";
-
-// URL base de la API, tomada de app.json (extra)
-const API_URL =
-  Constants.expoConfig?.extra?.EXPO_PUBLIC_API_URL ||
-  "http://192.168.1.150:3000/api";
+import { useLogin } from "@/hooks/useLogin";
 
 export default function Page() {
-  const router = useRouter();
-  const setUser = useUserStore((s) => s.setUser);
-  const setToken = useUserStore((s) => s.setToken);
-  const { promptAsync } = useGoogleAuth();
-  const { setGrupo } = useTheme();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handleUrl = async ({ url }: { url: string }) => {
-      if (url) {
-        const parsed = Linking.parse(url);
-        const error = parsed.queryParams?.error;
-        if (error) setErrorMessage(decodeURIComponent(error as string));
-      }
-    };
-
-    const subscription = Linking.addEventListener("url", handleUrl);
-
-    return () => {
-      subscription.remove();
-    };
-  }, []);
-
-  const handleEmailLogin = async () => {
-    if (!email || !password) {
-      Alert.alert("Error", "Correo y contraseña son obligatorios");
-      return;
-    }
-
-    try {
-      const url = `${API_URL}/auth/login`;
-      console.log("Intentando conectar a:", url);
-
-      const res = await axios.post(url, {
-        email,
-        password,
-      });
-
-      const { token, user } = res.data;
-      setUser(user);
-      setToken(token);
-
-      const grupo = detectarGrupoDesdeCorreo(email);
-      setGrupo(grupo);
-
-      router.replace("/(drawer)/inicio");
-    } catch (err: any) {
-      console.error(
-        "Error al iniciar sesión con email:",
-        err.response?.data || err.message
-      );
-      Alert.alert(
-        "Error",
-        err.response?.data?.message || "No se pudo iniciar sesión"
-      );
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    const result = await promptAsync();
-
-    if (result.type === "success" && result.authentication) {
-      try {
-        const url = `${API_URL}/auth/google`;
-        console.log("Intentando conectar con Google a:", url);
-
-        const res = await axios.post(url, {
-          accessToken: result.authentication.accessToken,
-        });
-
-        const { token, user } = res.data;
-        setUser(user);
-        setToken(token);
-
-        const grupo = detectarGrupoDesdeCorreo(user.email);
-        setGrupo(grupo);
-
-        router.replace("/(drawer)/inicio");
-      } catch (err: any) {
-        console.error(
-          "Error al iniciar sesión con Google:",
-          err.response?.data || err.message
-        );
-        Alert.alert(
-          "Error",
-          err.response?.data?.message || "No se pudo iniciar sesión con Google"
-        );
-      }
-    } else if (result.type === "cancel") {
-      Alert.alert("Inicio de sesión cancelado", "El proceso fue cancelado.");
-    } else {
-      Alert.alert(
-        "Error",
-        "No se pudo completar el inicio de sesión con Google."
-      );
-    }
-  };
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    errorMessage,
+    loading,
+    handleEmailLogin,
+    handleGoogleLogin,
+  } = useLogin();
 
   return (
     <View style={[layout.container, styles.centered]}>
@@ -137,23 +33,29 @@ export default function Page() {
 
         <TextInput
           placeholder="Correo electrónico"
-          placeholderTextColor="#888"
+          placeholderTextColor={colors.light.textMuted}
           style={styles.input}
           autoCapitalize="none"
           keyboardType="email-address"
           value={email}
           onChangeText={setEmail}
+          editable={!loading}
         />
         <TextInput
           placeholder="Contraseña"
-          placeholderTextColor="#888"
+          placeholderTextColor={colors.light.textMuted}
           secureTextEntry
           style={styles.input}
           value={password}
           onChangeText={setPassword}
+          editable={!loading}
         />
 
-        <TouchableOpacity style={styles.loginButton} onPress={handleEmailLogin}>
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={handleEmailLogin}
+          disabled={loading}
+        >
           <Text style={styles.loginText}>Entrar</Text>
         </TouchableOpacity>
 
@@ -166,6 +68,7 @@ export default function Page() {
         <TouchableOpacity
           onPress={handleGoogleLogin}
           style={styles.googleButton}
+          disabled={loading}
         >
           <Text style={styles.googleText}>Entrar con Google</Text>
         </TouchableOpacity>
@@ -182,7 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.light.background,
   },
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.light.surface,
     padding: 24,
     borderRadius: 12,
     width: "90%",
@@ -198,7 +101,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   input: {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: colors.light.inputBg,
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 16,
@@ -212,7 +115,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   loginText: {
-    color: "#fff",
+    color: colors.light.surface,
     fontWeight: "600",
     textAlign: "center",
   },
@@ -224,11 +127,11 @@ const styles = StyleSheet.create({
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: "#ccc",
+    backgroundColor: colors.light.divider,
   },
   orText: {
     marginHorizontal: 12,
-    color: "#888",
+    color: colors.light.textMuted,
   },
   googleButton: {
     borderWidth: 1,

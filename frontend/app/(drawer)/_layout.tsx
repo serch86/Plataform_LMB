@@ -7,6 +7,7 @@ import {
   DrawerContentScrollView,
   DrawerItemList,
 } from "@react-navigation/drawer";
+import AuthGate from "@/components/AuthGate";
 
 function CustomDrawerFooter(props: any) {
   const router = useRouter();
@@ -43,19 +44,21 @@ export default function DrawerLayout() {
   const { theme } = useTheme();
 
   return (
-    <Drawer
-      screenOptions={{
-        drawerActiveTintColor: theme.primary,
-        drawerLabelStyle: { fontWeight: "600" },
-      }}
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
-    >
-      <Drawer.Screen name="inicio" options={{ title: "Inicio" }} />
-      <Drawer.Screen name="roster" options={{ title: "Subir Roster" }} />
-      <Drawer.Screen name="reportes" options={{ title: "Reportes" }} />
-      <Drawer.Screen name="suscripcion" options={{ title: "Suscripción" }} />
-      <Drawer.Screen name="settings" options={{ title: "Configuración" }} />
-    </Drawer>
+    <AuthGate>
+      <Drawer
+        screenOptions={{
+          drawerActiveTintColor: theme.primary,
+          drawerLabelStyle: { fontWeight: "600" },
+        }}
+        drawerContent={(props) => <CustomDrawerContent {...props} />}
+      >
+        <Drawer.Screen name="inicio" options={{ title: "Inicio" }} />
+        <Drawer.Screen name="roster" options={{ title: "Subir Roster" }} />
+        <Drawer.Screen name="reportes" options={{ title: "Reportes" }} />
+        <Drawer.Screen name="suscripcion" options={{ title: "Suscripción" }} />
+        <Drawer.Screen name="settings" options={{ title: "Configuración" }} />
+      </Drawer>
+    </AuthGate>
   );
 }
 

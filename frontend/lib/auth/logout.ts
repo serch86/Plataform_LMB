@@ -1,8 +1,9 @@
-import { clearSession } from "@/lib/secureStore";
+import { clearSession as clearSecureSession } from "@/lib/secureStore";
 import { useUserStore } from "@/store/useUserStore";
 
-export const logout = async () => {
-  await clearSession();
-  useUserStore.getState().setUser(null);
-  useUserStore.getState().setToken(null);
-};
+export async function logout() {
+  // Limpia el estado global
+  useUserStore.getState().clearSession();
+  // Borra sesión del almacenamiento seguro
+  await clearSecureSession();
+}
