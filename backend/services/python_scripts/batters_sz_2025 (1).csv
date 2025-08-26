@@ -1,0 +1,334 @@
+BatterId,id,Batter,birthDate,height,height_ft,strikeZoneTop,strikeZoneBottom,batSide,primaryPosition,active,team,Temporada_Anio
+2.0,2,,1900-01-01,"0'0""",6.4,3.543,1.609,Left,N/A,true,SIN_EQUIPO,Verano-2025
+570717.0,570717,"Flores, Ramón",1992-03-26,"5' 10""",5.833,3.24,1.456,Left,Outfielder,true,DIA_ROJ,Verano-2025
+679296.0,679296,"Bottcher, Matt",1998-01-25,"5' 10""",5.833,3.24,1.456,Left,Outfielder,true,DOR_CHI,Verano-2025
+642487.0,642487,"Martinez, Jesus",1995-05-07,"5' 10""",5.833,3.24,1.456,Left,Outfielder,true,BRA_MEX,Verano-2025
+669288.0,669288,"Johnson, Daniel",1995-07-11,"5' 10""",5.833,3.24,1.456,Left,Outfielder,true,GEN_MEX,Verano-2025
+626843.0,626843,"Guerra, Yosmany",1983-04-27,"5' 10""",5.833,3.24,1.456,Left,Shortstop,true,CON_QUE,Verano-2025
+659253.0,659253,"Flores, Aldo",1995-09-30,"5' 10""",5.833,3.24,1.456,Left,Infield,true,SAR_SAL,Verano-2025
+656371.0,656371,"Díaz, Isan",1996-05-27,"5' 10""",5.833,3.24,1.456,Left,Second Base,true,VAQ_LAG,Verano-2025
+673145.0,673145,"Diaz, Geraldi",2000-07-08,"5' 11""",5.917,3.285,1.478,Left,Catcher,true,GEN_MEX,Verano-2025
+692798.0,692798,"Motta, Italo",1998-08-07,"5' 11""",5.917,3.285,1.478,Left,Second Base,true,ROJ_MEX,Verano-2025
+642423.0,642423,"Sierra, Magneuris",1996-04-07,"5' 11""",5.917,3.285,1.478,Left,Outfielder,true,ACE_MEX,Verano-2025
+679754.0,679754,"Rodriguez, Alberto",2000-10-06,"5' 11""",5.917,3.285,1.478,Left,Outfielder,true,REI_MEX,Verano-2025
+571531.0,571531,"Burruel, Sergio",1991-07-22,"5' 11""",5.917,3.285,1.478,Left,Catcher,true,DOR_CHI,Verano-2025
+682655.0,682655,"Villalobos, Fernando",2002-06-24,"5' 11""",5.917,3.285,1.478,Left,Catcher,true,DIA_ROJ,Verano-2025
+663845.0,663845,"Rivas, Alfonso",1996-09-13,"5' 11""",5.917,3.285,1.478,Left,First Base,true,VAQ_LAG,Verano-2025
+664057.0,664057,"Stevenson, Andrew",1994-06-01,"5' 11""",5.917,3.285,1.478,Left,Outfielder,true,PIR_MEX,Verano-2025
+500869.0,500869,"Avila, Emmanuel",1988-11-26,"5' 11""",5.917,3.285,1.478,Left,Second Base,true,SAR_SAL,Verano-2025
+516472.0,516472,"Arcia, Francisco",1989-09-14,"5' 11""",5.917,3.285,1.478,Left,Catcher,true,ROJ_MEX,Verano-2025
+616613.0,616613,"Amador, Rodolfo",1992-11-11,"5' 11""",5.917,3.285,1.478,Left,Third Base,true,ACE_MEX,Verano-2025
+663524.0,663524,"Randolph, Cornelius",1997-06-02,"5' 11""",5.917,3.285,1.478,Left,Outfield,true,TIG_QUI,Verano-2025
+543611.0,543611,"Ortiz, Danny",1990-01-05,"5' 11""",5.917,3.285,1.478,Left,Outfielder,true,BRA_MEX,Verano-2025
+606019.0,606019,"Quiroz, Esteban",1992-02-17,"5' 5""",5.417,3.017,1.343,Left,Third Base,true,SUL_MON,Verano-2025
+661270.0,661270,"Santos, Roel",1987-09-15,"5' 6""",5.5,3.062,1.366,Left,Outfield,true,OLM_MEX,Verano-2025
+506560.0,506560,"Amarista, Alexi",1989-04-06,"5' 6""",5.5,3.062,1.366,Left,Shortstop,true,GUE_MEX,Verano-2025
+802572.0,802572,"Monroy, Antonio",1997-06-26,"5' 7""",5.583,3.106,1.388,Left,Starting Pitcher,true,TIG_QUI,Verano-2025
+592622.0,592622,"Payton, Mark",1991-12-07,"5' 7""",5.583,3.106,1.388,Left,Outfield,true,VAQ_LAG,Verano-2025
+641104.0,641104,"Mendivil, Carlos",1993-08-29,"5' 7""",5.583,3.106,1.388,Left,Catcher,true,CHA_JAL1,Verano-2025
+585251.0,585251,"Gamboa, Juan Carlos",1991-04-18,"5' 7""",5.583,3.106,1.388,Left,Shortstop,true,DIA_ROJ,Verano-2025
+641432.0,641432,"Calhoun, Willie",1994-11-04,"5' 8""",5.667,3.151,1.411,Left,First Base,true,TIG_QUI,Verano-2025
+657675.0,657675,"Martin, Rudy",1996-01-31,"5' 8""",5.667,3.151,1.411,Left,Outfielder,true,TOR_TIJ,Verano-2025
+691543.0,691543,"Urbina, Fabian",2001-10-25,"5' 8""",5.667,3.151,1.411,Left,Catcher,true,LEO_MEX,Verano-2025
+679881.0,679881,"Martínez, J.P.",1996-03-21,"5' 8""",5.667,3.151,1.411,Left,Outfielder,true,SAR_SAL,Verano-2025
+694450.0,694450,"Simington, Miles",1999-08-24,"5' 8""",5.667,3.151,1.411,Left,Outfield,true,TIG_QUI,Verano-2025
+628450.0,628450,"Hernandez, Yadiel",1987-10-09,"5' 9""",5.75,3.195,1.433,Left,Outfielder,true,ROJ_MEX,Verano-2025
+692270.0,692270,"Castaneda, Antonio",2001-09-10,"5' 9""",5.75,3.195,1.433,Left,Outfield,true,ROJ_MEX,Verano-2025
+606477.0,606477,"Tavárez, Aneury",1992-04-14,"5' 9""",5.75,3.195,1.433,Left,Outfielder,true,CON_QUE,Verano-2025
+605480.0,605480,"Smith, Mallex",1993-05-06,"5' 9""",5.75,3.195,1.433,Left,Outfielder,true,CHA_JAL1,Verano-2025
+832575.0,832575,"Rabassa, Robert",2005-05-03,"5' 9""",5.75,3.195,1.433,Left,Infield,true,TIG_QUI,Verano-2025
+832717.0,832717,"Lavagnino, Jose",2007-06-21,"5' 9""",5.75,3.195,1.433,Left,Catcher,true,DIA_ROJ,Verano-2025
+511428.0,511428,"Heras, Leo",1990-05-29,"5' 9""",5.75,3.195,1.433,Left,Outfield,true,OLM_MEX,Verano-2025
+703070.0,703070,"Chapelli, Loidel",2001-12-20,"5' 9""",5.75,3.195,1.433,Left,Outfield,true,OLM_MEX,Verano-2025
+832568.0,832568,"Quezada, Alejandro",2001-12-01,"5' 9""",5.75,3.195,1.433,Left,Outfield,true,CHA_JAL1,Verano-2025
+689209.0,689209,"Dawson, Chase",1997-06-12,"5' 9""",5.75,3.195,1.433,Left,Second Base,true,BRA_MEX,Verano-2025
+608422.0,608422,"Godoy, José",1994-10-13,"5' 9""",5.75,3.195,1.433,Left,Catcher,true,VAQ_LAG,Verano-2025
+608748.0,608748,"Mena, Evaristo",1994-04-08,"5' 9""",5.75,3.195,1.433,Left,Infield,true,REI_MEX,Verano-2025
+429664.0,429664,"Canó, Robinson",1982-10-22,"6' 0""",6.0,3.329,1.501,Left,Second Base,true,DIA_ROJ,Verano-2025
+596107.0,596107,"Filia, Eric",1992-07-06,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,CON_QUE,Verano-2025
+607439.0,607439,"Rodriguez, Herlis",1994-06-10,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,AGU_VER,Verano-2025
+598724.0,598724,"Boscan, Manuel",1993-03-10,"6' 0""",6.0,3.329,1.501,Left,Second Base,true,CON_QUE,Verano-2025
+656695.0,656695,"Matijevic, J.J.",1995-11-14,"6' 0""",6.0,3.329,1.501,Left,First Base,true,TIG_QUI,Verano-2025
+650995.0,650995,"Obeso, Norberto",1995-07-09,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,LEO_MEX,Verano-2025
+593523.0,593523,"Hernández, Marco",1992-09-06,"6' 0""",6.0,3.329,1.501,Left,Second Base,true,OLM_MEX,Verano-2025
+689577.0,689577,"Antonini, Aaron",1998-07-27,"6' 0""",6.0,3.329,1.501,Left,Catcher,true,DIA_ROJ,Verano-2025
+642456.0,642456,"Barrera, Luis",1995-11-15,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,GUE_MEX,Verano-2025
+665918.0,665918,"Aparicio, Miguel",1999-03-17,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,PER_MEX,Verano-2025
+676140.0,676140,"Ornelas, Julian",1996-12-28,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,DIA_ROJ,Verano-2025
+542455.0,542455,"Arcia, Oswaldo",1991-05-09,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,GEN_MEX,Verano-2025
+625506.0,625506,"Corredor, Aldrem",1995-10-27,"6' 0""",6.0,3.329,1.501,Left,First Base,true,ACE_MEX,Verano-2025
+665914.0,665914,"Montano, Daniel",1999-03-31,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,AGU_VER,Verano-2025
+668751.0,668751,"Mitchell, Cal",1999-03-08,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,PIR_MEX,Verano-2025
+680815.0,680815,"Dues, Damon",1998-06-21,"6' 0""",6.0,3.329,1.501,Left,Shortstop,true,VAQ_LAG,Verano-2025
+664768.0,664768,"Panas, Connor",1993-02-11,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,PIR_MEX,Verano-2025
+802580.0,802580,"Castro, Roberto",2000-08-10,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,BRA_MEX,Verano-2025
+702250.0,702250,"Carr, Jared",1999-05-24,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,REI_MEX,Verano-2025
+611319.0,611319,"Arredondo, Jesus",1991-02-20,"6' 0""",6.0,3.329,1.501,Left,Shortstop,true,PIR_MEX,Verano-2025
+665922.0,665922,"Muzziotti, Símon",1998-12-27,"6' 0""",6.0,3.329,1.501,Left,Outfielder,true,PER_MEX,Verano-2025
+678636.0,678636,"Martinez, Orlando",1998-02-17,"6' 0""",6.0,3.329,1.501,Left,Outfield,true,REI_MEX,Verano-2025
+666728.0,666728,"Soto, Carlos",1999-04-27,"6' 1""",6.083,3.374,1.523,Left,Catcher,true,CON_QUE,Verano-2025
+666164.0,666164,"Rutherford, Blake",1997-05-02,"6' 1""",6.083,3.374,1.523,Left,Outfielder,true,TOR_TIJ,Verano-2025
+696535.0,696535,"Mendoza, Brayan",2001-05-30,"6' 1""",6.083,3.374,1.523,Left,Outfield,true,DOR_CHI,Verano-2025
+664119.0,664119,"Allen, Austin",1994-01-16,"6' 1""",6.083,3.374,1.523,Left,Catcher,true,GEN_MEX,Verano-2025
+477399.0,477399,"Castillo, Jesse",1983-03-03,"6' 1""",6.083,3.374,1.523,Left,Third Base,true,DOR_CHI,Verano-2025
+642451.0,642451,"Liberato, Luis",1995-12-18,"6' 1""",6.083,3.374,1.523,Left,Outfield,true,DIA_ROJ,Verano-2025
+605378.0,605378,"Medrano, Kevin",1990-05-21,"6' 1""",6.083,3.374,1.523,Left,Second Base,true,PIR_MEX,Verano-2025
+681927.0,681927,"Rhinesmith, Jacob",1996-05-23,"6' 2""",6.167,3.418,1.546,Left,Outfield,true,DOR_CHI,Verano-2025
+657434.0,657434,"O'Grady, Brian",1992-05-17,"6' 2""",6.167,3.418,1.546,Left,Outfielder,true,VAQ_LAG,Verano-2025
+677977.0,677977,"Robles, Edgar",1996-08-21,"6' 2""",6.167,3.418,1.546,Left,Outfield,true,VAQ_LAG,Verano-2025
+623507.0,623507,"Lester, Josh",1994-07-17,"6' 2""",6.167,3.418,1.546,Left,First Base,true,SUL_MON,Verano-2025
+628013.0,628013,"Mendoza, Victor",1990-11-30,"6' 2""",6.167,3.418,1.546,Left,First Base,true,SUL_MON,Verano-2025
+693515.0,693515,"Howard, Gaige",1998-05-22,"6' 2""",6.167,3.418,1.546,Left,Outfield,true,TIG_QUI,Verano-2025
+672361.0,672361,"Ruiz, Agustin",1999-09-23,"6' 2""",6.167,3.418,1.546,Left,Outfielder,true,OLM_MEX,Verano-2025
+591977.0,591977,"Perez, Felix",1984-11-14,"6' 2""",6.167,3.418,1.546,Left,Outfielder,true,PIR_MEX,Verano-2025
+668832.0,668832,"McCann, Kyle",1997-12-02,"6' 2""",6.167,3.418,1.546,Left,Catcher,true,PIR_MEX,Verano-2025
+592530.0,592530,"Marmolejos, José",1993-01-02,"6' 2""",6.167,3.418,1.546,Left,First Base,true,DIA_ROJ,Verano-2025
+547982.0,547982,"Martin, Leonys",1988-03-06,"6' 2""",6.167,3.418,1.546,Left,Outfielder,true,SUL_MON,Verano-2025
+593647.0,593647,"Brito, Sócrates",1992-09-06,"6' 2""",6.167,3.418,1.546,Left,Outfielder,true,AGU_VER,Verano-2025
+677673.0,677673,"Vargas, Imanol",1998-06-29,"6' 3""",6.25,3.463,1.568,Left,Outfield,true,PER_MEX,Verano-2025
+614173.0,614173,"Cordero, Franchy",1994-09-02,"6' 3""",6.25,3.463,1.568,Left,Outfield,true,TOR_TIJ,Verano-2025
+606281.0,606281,"Vasquez, Danry",1994-01-08,"6' 3""",6.25,3.463,1.568,Left,Outfielder,true,ROJ_MEX,Verano-2025
+672906.0,672906,"Alonso, Lazaro",1994-12-17,"6' 3""",6.25,3.463,1.568,Left,First Base,true,REI_MEX,Verano-2025
+606132.0,606132,"Tapia, Raimel",1994-02-04,"6' 3""",6.25,3.463,1.568,Left,Outfielder,true,SUL_MON,Verano-2025
+621348.0,621348,"Clay, Sam",1993-06-21,"6' 3""",6.25,3.463,1.568,Left,Pitcher,true,REI_MEX,Verano-2025
+657733.0,657733,"Ramos, Roberto",1994-12-28,"6' 3""",6.25,3.463,1.568,Left,First Base,true,SAR_SAL,Verano-2025
+622698.0,622698,"Pimentel, Sandber",1994-09-12,"6' 3""",6.25,3.463,1.568,Left,First Base,true,BRA_MEX,Verano-2025
+680693.0,680693,"Lavigne, Grant",1999-08-27,"6' 3""",6.25,3.463,1.568,Left,First Base,true,OLM_MEX,Verano-2025
+656666.0,656666,"Lugbauer, Drew",1996-08-23,"6' 4""",6.333,3.508,1.591,Left,First Base,true,GEN_MEX,Verano-2025
+608577.0,608577,"Mazara, Nomar",1995-04-26,"6' 4""",6.333,3.508,1.591,Left,Outfield,true,AGU_VER,Verano-2025
+679628.0,679628,"Teter, Jacob",1999-02-26,"6' 4""",6.333,3.508,1.591,Left,First Base,true,TIG_QUI,Verano-2025
+451713.0,451713,"Peguero, Carlos",1987-02-22,"6' 5""",6.417,3.552,1.613,Left,Outfielder,true,CON_QUE,Verano-2025
+621572.0,621572,"Barnum, Keon",1993-01-16,"6' 5""",6.417,3.552,1.613,Left,First Base,true,DOR_CHI,Verano-2025
+625329.0,625329,"Urrutia, Henry",1987-02-13,"6' 5""",6.417,3.552,1.613,Left,Designated Hitter,true,CON_QUE,Verano-2025
+657576.0,657576,"Flores, Marc",1992-06-11,"6' 5""",6.417,3.552,1.613,Left,First Base,true,TIG_QUI,Verano-2025
+608597.0,608597,"Guzmán, Ronald",1994-10-20,"6' 5""",6.417,3.552,1.613,Left,Pitcher,true,AGU_VER,Verano-2025
+543021.0,543021,"Charles, Art",1990-11-10,"6' 6""",6.5,3.597,1.636,Left,First Base,true,LEO_MEX,Verano-2025
+816260.0,816260,"Corral, Bryan",2005-01-28,N/A,0.0,3.5750330000000003,1.425,Left,Outfield,true,ACE_MEX,Verano-2025
+0.0,0,,1900-01-01,"0'0""",6.4,3.543,1.609,Right,N/A,true,SIN_EQUIPO,Verano-2025
+1.0,1,,1900-01-01,"0'0""",6.4,3.543,1.609,Right,N/A,true,SIN_EQUIPO,Verano-2025
+640447.0,640447,"Ervin, Phillip",1992-07-15,"5' 10""",5.833,3.24,1.456,Right,Outfielder,true,PER_MEX,Verano-2025
+540204.0,540204,"Rios, Ramon",1988-03-04,"5' 10""",5.833,3.24,1.456,Right,Second Base,true,OLM_MEX,Verano-2025
+665913.0,665913,"Melean, Kelvin",1998-09-05,"5' 10""",5.833,3.24,1.456,Right,Third Base,true,REI_MEX,Verano-2025
+656024.0,656024,"Pérez, Carlos",1996-09-10,"5' 10""",5.833,3.24,1.456,Right,Catcher,true,REI_MEX,Verano-2025
+806591.0,806591,"Gastelum, Cristopher",2004-10-19,"5' 10""",5.833,3.24,1.456,Right,Infield,true,TIG_QUI,Verano-2025
+660840.0,660840,"Lizarraga, Jose",1997-08-27,"5' 10""",5.833,3.24,1.456,Right,Catcher,true,REI_MEX,Verano-2025
+616570.0,616570,"Sanchez, Daniel",1992-12-16,"5' 10""",5.833,3.24,1.456,Right,Catcher,true,ROJ_MEX,Verano-2025
+510548.0,510548,"Felix, Jose Heberto",1988-06-28,"5' 10""",5.833,3.24,1.456,Right,Catcher,true,CHA_JAL1,Verano-2025
+591572.0,591572,"Aguilar, Jose",1990-05-19,"5' 10""",5.833,3.24,1.456,Right,Outfielder,true,CHA_JAL1,Verano-2025
+594906.0,594906,"Lopez, Alfredo",1989-10-07,"5' 10""",5.833,3.24,1.456,Right,Second Base,true,GEN_MEX,Verano-2025
+672953.0,672953,"Vizcarra, Gilberto",1999-03-01,"5' 10""",5.833,3.24,1.456,Right,Catcher,true,LEO_MEX,Verano-2025
+664021.0,664021,"Norzagaray, Ciro",1994-08-17,"5' 10""",5.833,3.24,1.456,Right,Shortstop,true,PER_MEX,Verano-2025
+835115.0,835115,"Lopez, Johan",2005-06-04,"5' 10""",5.833,3.24,1.456,Right,Second Base,true,SUL_MON,Verano-2025
+679589.0,679589,"Villegas, Fernando",1998-06-28,"5' 10""",5.833,3.24,1.456,Right,Outfield,true,SAR_SAL,Verano-2025
+624645.0,624645,"Leon, Julian",1996-01-24,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,SAR_SAL,Verano-2025
+678499.0,678499,"Romero, Randy",1999-08-10,"5' 11""",5.917,3.285,1.478,Right,Outfield,true,GEN_MEX,Verano-2025
+518402.0,518402,"Alvarez, Jose",1989-02-07,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,GEN_MEX,Verano-2025
+514913.0,514913,"Tejada, Rubén",1989-10-27,"5' 11""",5.917,3.285,1.478,Right,Shortstop,true,GEN_MEX,Verano-2025
+501605.0,501605,"Navarro, Yamaico",1987-10-31,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,OLM_MEX,Verano-2025
+665455.0,665455,"Rodriguez, Isaac",1991-03-03,"5' 11""",5.917,3.285,1.478,Right,Second Base,false,TOR_TIJ,Verano-2025
+623912.0,623912,"Ramírez, Harold",1994-09-06,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,ROJ_MEX,Verano-2025
+622700.0,622700,"Chávez, Santiago",1995-08-05,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,ACE_MEX,Verano-2025
+600898.0,600898,"Flores, Jecksson",1993-10-28,"5' 11""",5.917,3.285,1.478,Right,Shortstop,true,ACE_MEX,Verano-2025
+593495.0,593495,"Castro, Daniel",1992-11-14,"5' 11""",5.917,3.285,1.478,Right,Second Base,true,CON_QUE,Verano-2025
+665651.0,665651,"Rincones, Diego",1999-06-14,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,AGU_VER,Verano-2025
+570799.0,570799,"Villanueva, Christian",1991-06-19,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,REI_MEX,Verano-2025
+660996.0,660996,"Polanco, Sabriel",1995-04-04,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,GEN_MEX,Verano-2025
+613546.0,613546,"Castellano, Angelo",1995-01-13,"5' 11""",5.917,3.285,1.478,Right,Shortstop,true,BRA_MEX,Verano-2025
+493364.0,493364,"Viciedo, Dayan",1989-03-10,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,ROJ_MEX,Verano-2025
+593643.0,593643,"Alberto, Hanser",1992-10-17,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,PIR_MEX,Verano-2025
+828332.0,828332,"Higuera, Jesus",2006-10-27,"5' 11""",5.917,3.285,1.478,Right,Second Base,true,PIR_MEX,Verano-2025
+622168.0,622168,"Muñoz, Yairo",1995-01-23,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,CON_QUE,Verano-2025
+642751.0,642751,"Martínez, Carlos",1995-05-02,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,SAR_SAL,Verano-2025
+547379.0,547379,"Pérez, Roberto",1988-12-23,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,GEN_MEX,Verano-2025
+650506.0,650506,"Gomez, Jose",1996-12-10,"5' 11""",5.917,3.285,1.478,Right,Third Base,true,REI_MEX,Verano-2025
+699136.0,699136,"Villalobos, Heber",2003-09-24,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,GUE_MEX,Verano-2025
+640900.0,640900,"Ascanio, Rayder",1996-03-17,"5' 11""",5.917,3.285,1.478,Right,Shortstop,true,REI_MEX,Verano-2025
+676369.0,676369,"Velázquez, Nelson",1998-12-26,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,GUE_MEX,Verano-2025
+656669.0,656669,"Luplow, Jordan",1993-09-26,"5' 11""",5.917,3.285,1.478,Right,Outfielder,true,ROJ_MEX,Verano-2025
+815575.0,815575,"Almeida, Antonio",2003-12-12,"5' 11""",5.917,3.285,1.478,Right,Catcher,true,OLM_MEX,Verano-2025
+592312.0,592312,"Flores, Jorge",1991-11-25,"5' 5""",5.417,3.017,1.343,Right,Shortstop,true,GUE_MEX,Verano-2025
+676021.0,676021,"Santos, Luis",2000-01-04,"5' 6""",5.5,3.062,1.366,Right,Shortstop,true,SUL_MON,Verano-2025
+832571.0,832571,"Jacquez, Hector",2004-02-04,"5' 6""",5.5,3.062,1.366,Right,Outfield,true,SUL_MON,Verano-2025
+812782.0,812782,"Gomez, Brayan",1999-09-14,"5' 6""",5.5,3.062,1.366,Right,Second Base,true,PER_MEX,Verano-2025
+811474.0,811474,"Partida, Luis",2003-12-15,"5' 6""",5.5,3.062,1.366,Right,Outfield,true,AGU_VER,Verano-2025
+836041.0,836041,"Canizalez, Yustin",2007-01-01,"5' 7""",5.583,3.106,1.388,Right,Outfield,true,LEO_MEX,Verano-2025
+699860.0,699860,"Banuelos, Andrew",1996-03-31,"5' 7""",5.583,3.106,1.388,Right,Catcher,true,TIG_QUI,Verano-2025
+643374.0,643374,"Ibarra, Christian",1992-09-10,"5' 7""",5.583,3.106,1.388,Right,Third Base,true,PIR_MEX,Verano-2025
+592261.0,592261,"DeShields, Delino",1992-08-16,"5' 7""",5.583,3.106,1.388,Right,Outfielder,true,PIR_MEX,Verano-2025
+832701.0,832701,"Torres, Jose Ary",2004-06-04,"5' 7""",5.583,3.106,1.388,Right,Catcher,false,AGU_VER,Verano-2025
+587275.0,587275,"Espinoza, Alan",1991-01-30,"5' 7""",5.583,3.106,1.388,Right,Catcher,true,OLM_MEX,Verano-2025
+653245.0,653245,"Delgado, Kristian",1993-07-19,"5' 7""",5.583,3.106,1.388,Right,Third Base,true,GEN_MEX,Verano-2025
+550492.0,550492,"Juarez, Luis",1990-02-06,"5' 8""",5.667,3.151,1.411,Right,Catcher,true,LEO_MEX,Verano-2025
+652999.0,652999,"Fabela, Jesus",1994-12-07,"5' 8""",5.667,3.151,1.411,Right,Outfielder,true,PIR_MEX,Verano-2025
+682266.0,682266,"Auerbach, Brett",1998-08-27,"5' 8""",5.667,3.151,1.411,Right,Catcher,true,PIR_MEX,Verano-2025
+687019.0,687019,"Alvarez, Andrés",1997-03-29,"5' 8""",5.667,3.151,1.411,Right,Shortstop,true,BRA_MEX,Verano-2025
+634495.0,634495,"Carrera, Gilberto",1994-11-16,"5' 8""",5.667,3.151,1.411,Right,Second Base,true,BRA_MEX,Verano-2025
+693331.0,693331,"Cabrera, Robinson",1992-02-26,"5' 8""",5.667,3.151,1.411,Right,Infield,true,TIG_QUI,Verano-2025
+815670.0,815670,"Arias, Isaac",2004-05-16,"5' 8""",5.667,3.151,1.411,Right,Catcher,true,REI_MEX,Verano-2025
+661411.0,661411,"Cedrola, Lorenzo",1998-01-12,"5' 8""",5.667,3.151,1.411,Right,Outfielder,true,PER_MEX,Verano-2025
+665908.0,665908,"Torrealba, Eduardo",1999-03-26,"5' 8""",5.667,3.151,1.411,Right,Shortstop,true,PER_MEX,Verano-2025
+546994.0,546994,"Hinojosa, C.J.",1994-07-15,"5' 8""",5.667,3.151,1.411,Right,Second Base,true,GEN_MEX,Verano-2025
+667442.0,667442,"Hollis, Connor",1994-11-18,"5' 8""",5.667,3.151,1.411,Right,Second Base,true,PIR_MEX,Verano-2025
+823976.0,823976,"Morales, Ivan",2001-04-14,"5' 8""",5.667,3.151,1.411,Right,Catcher,true,BRA_MEX,Verano-2025
+832211.0,832211,"Cruz, Abiam",2006-07-13,"5' 8""",5.667,3.151,1.411,Right,Shortstop,true,ACE_MEX,Verano-2025
+814911.0,814911,"Chacon, Hans",2002-10-30,"5' 8""",5.667,3.151,1.411,Right,Outfield,true,LEO_MEX,Verano-2025
+634496.0,634496,"German, Leo",1993-01-10,"5' 9""",5.75,3.195,1.433,Right,Outfielder,true,GUE_MEX,Verano-2025
+672373.0,672373,"Morales, Jeferson",1999-05-13,"5' 9""",5.75,3.195,1.433,Right,Catcher,true,SAR_SAL,Verano-2025
+542419.0,542419,"Castillo, Ali",1989-06-19,"5' 9""",5.75,3.195,1.433,Right,Shortstop,true,ROJ_MEX,Verano-2025
+628329.0,628329,"Castillo, Rusney",1987-07-09,"5' 9""",5.75,3.195,1.433,Right,Outfielder,true,CON_QUE,Verano-2025
+692941.0,692941,"Mora, Hector",2002-12-21,"5' 9""",5.75,3.195,1.433,Right,Infield,true,LEO_MEX,Verano-2025
+672438.0,672438,"Valenzuela, Roberto",1995-03-03,"5' 9""",5.75,3.195,1.433,Right,Second Base,true,SUL_MON,Verano-2025
+692979.0,692979,"Serrano, Maikel",1993-03-31,"5' 9""",5.75,3.195,1.433,Right,Outfield,true,PER_MEX,Verano-2025
+596671.0,596671,"Renteria, Omar",1990-01-17,"5' 9""",5.75,3.195,1.433,Right,Catcher,true,SUL_MON,Verano-2025
+653414.0,653414,"Medina, Luis",1995-02-14,"5' 9""",5.75,3.195,1.433,Right,Shortstop,true,REI_MEX,Verano-2025
+824003.0,824003,"Amador, Luis",2003-07-15,"5' 9""",5.75,3.195,1.433,Right,Catcher,true,TOR_TIJ,Verano-2025
+694942.0,694942,"McDermott, Matt",1998-11-21,"5' 9""",5.75,3.195,1.433,Right,Second Base,true,TIG_QUI,Verano-2025
+595943.0,595943,"Evans, Phillip",1992-09-10,"5' 9""",5.75,3.195,1.433,Right,Third Base,true,BRA_MEX,Verano-2025
+814656.0,814656,"Verdugo, Elias",2004-07-09,"5' 9""",5.75,3.195,1.433,Right,Infield,true,LEO_MEX,Verano-2025
+702839.0,702839,"Marten, Oscar",1998-02-16,"5' 9""",5.75,3.195,1.433,Right,Infield,true,REI_MEX,Verano-2025
+832722.0,832722,"Flores, Geovany",2000-03-08,"5' 9""",5.75,3.195,1.433,Right,Catcher,true,TIG_QUI,Verano-2025
+471906.0,471906,"Rodriguez, Reynaldo",1986-07-02,"6' 0""",6.0,3.329,1.501,Right,First Base,true,GUE_MEX,Verano-2025
+682005.0,682005,"Estrada, Rusber",1995-06-05,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,DOR_CHI,Verano-2025
+671246.0,671246,"Macias, Fabricio",1998-03-11,"6' 0""",6.0,3.329,1.501,Right,Outfield,true,SAR_SAL,Verano-2025
+669137.0,669137,"Alvarez, Armando",1994-07-14,"6' 0""",6.0,3.329,1.501,Right,Third Base,true,GEN_MEX,Verano-2025
+662962.0,662962,"Atondo, Jasson",1995-08-27,"6' 0""",6.0,3.329,1.501,Right,Infield,true,OLM_MEX,Verano-2025
+672867.0,672867,"Urena, Estamy",1999-05-27,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,PER_MEX,Verano-2025
+653001.0,653001,"Leyva, Samar",1994-09-20,"6' 0""",6.0,3.329,1.501,Right,Second Base,true,PER_MEX,Verano-2025
+541650.0,541650,"Pérez, Hernán",1991-03-26,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,TOR_TIJ,Verano-2025
+606299.0,606299,"Peraza, José",1994-04-30,"6' 0""",6.0,3.329,1.501,Right,Second Base,true,ACE_MEX,Verano-2025
+675970.0,675970,"Robles, Alex",1995-07-07,"6' 0""",6.0,3.329,1.501,Right,Third Base,true,CON_QUE,Verano-2025
+664583.0,664583,"Gutierrez, Beder",1997-01-13,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,CON_QUE,Verano-2025
+617918.0,617918,"Chicuate, Marco",1992-07-14,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,BRA_MEX,Verano-2025
+680023.0,680023,"Mercado, Daniel",1996-03-09,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,PER_MEX,Verano-2025
+592660.0,592660,"Ravelo, Rangel",1992-04-24,"6' 0""",6.0,3.329,1.501,Right,First Base,true,TOR_TIJ,Verano-2025
+608365.0,608365,"Russell, Addison",1994-01-23,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,ACE_MEX,Verano-2025
+678285.0,678285,"Pertuz, Fabian",2000-09-01,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,AGU_VER,Verano-2025
+664247.0,664247,"Garlick, Kyle",1992-01-26,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,CHA_JAL1,Verano-2025
+658069.0,658069,"Fuentes, Joshua",1993-02-19,"6' 0""",6.0,3.329,1.501,Right,Third Base,true,CHA_JAL1,Verano-2025
+593528.0,593528,"Bonifacio, Jorge",1993-06-04,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,REI_MEX,Verano-2025
+670877.0,670877,"Vasquez, Braulio",1999-04-13,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,CON_QUE,Verano-2025
+811618.0,811618,"Carrillo, Elvin",2003-09-16,"6' 0""",6.0,3.329,1.501,Right,Infield,true,ACE_MEX,Verano-2025
+835316.0,835316,"Campo, Francisco Del",2009-05-26,"6' 0""",6.0,3.329,1.501,Right,Catcher,false,LEO_MEX,Verano-2025
+666695.0,666695,"Guzmán, Jonathan",1999-08-17,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,GEN_MEX,Verano-2025
+811620.0,811620,"Morales, Jorge",2001-05-03,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,SAR_SAL,Verano-2025
+808937.0,808937,"Guzman, Gael",2004-09-28,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,VAQ_LAG,Verano-2025
+835343.0,835343,"Coronado, Francisco",2009-02-27,"6' 0""",6.0,3.329,1.501,Right,Infield,true,LEO_MEX,Verano-2025
+594020.0,594020,"Valenzuela, Ricardo",1990-08-04,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,GUE_MEX,Verano-2025
+701722.0,701722,"Garcia, Sebastian",2002-11-08,"6' 0""",6.0,3.329,1.501,Right,Third Base,true,GUE_MEX,Verano-2025
+543875.0,543875,"Vasquez, Niko",1989-02-26,"6' 0""",6.0,3.329,1.501,Right,Third Base,true,AGU_VER,Verano-2025
+663708.0,663708,"Cancel, Gabriel",1996-12-08,"6' 0""",6.0,3.329,1.501,Right,Second Base,true,REI_MEX,Verano-2025
+622580.0,622580,"Reyes, Angel",1995-05-06,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,REI_MEX,Verano-2025
+517369.0,517369,"Pirela, José",1989-11-21,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,DIA_ROJ,Verano-2025
+681487.0,681487,"Emery, Robert",1996-10-22,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,TIG_QUI,Verano-2025
+592144.0,592144,"Bernard, Wynton",1990-09-24,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,LEO_MEX,Verano-2025
+685694.0,685694,"Lamas, Keven",1998-11-08,"6' 0""",6.0,3.329,1.501,Right,Infield,true,SAR_SAL,Verano-2025
+663618.0,663618,"Stowers, Josh",1997-02-25,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,CHA_JAL1,Verano-2025
+680771.0,680771,"Gil, Mateo",2000-07-24,"6' 0""",6.0,3.329,1.501,Right,Shortstop,true,CHA_JAL1,Verano-2025
+664848.0,664848,"Sands, Donny",1996-05-16,"6' 0""",6.0,3.329,1.501,Right,Catcher,true,CHA_JAL1,Verano-2025
+645308.0,645308,"Santos, Jhonny",1996-10-02,"6' 0""",6.0,3.329,1.501,Right,Outfielder,true,ACE_MEX,Verano-2025
+806157.0,806157,"Morales, Christian",2001-07-27,"6' 0""",6.0,3.329,1.501,Right,Outfield,true,SAR_SAL,Verano-2025
+516679.0,516679,"Valle, Sebastian",1990-07-24,"6' 1""",6.083,3.374,1.523,Right,Catcher,true,DIA_ROJ,Verano-2025
+657051.0,657051,"Torres, Nicholas",1993-06-30,"6' 1""",6.083,3.374,1.523,Right,Outfield,true,VAQ_LAG,Verano-2025
+660659.0,660659,"Cabrera, Leobaldo",1998-01-21,"6' 1""",6.083,3.374,1.523,Right,Outfielder,true,OLM_MEX,Verano-2025
+649557.0,649557,"Díaz, Aledmys",1990-08-01,"6' 1""",6.083,3.374,1.523,Right,Shortstop,true,ROJ_MEX,Verano-2025
+672882.0,672882,"Alcantara, Ismael",1998-09-25,"6' 1""",6.083,3.374,1.523,Right,Outfielder,true,TOR_TIJ,Verano-2025
+666968.0,666968,"Gracial, Yurisbel",1985-10-14,"6' 1""",6.083,3.374,1.523,Right,Infield,true,CON_QUE,Verano-2025
+650957.0,650957,"Cordero, Andretty",1997-05-03,"6' 1""",6.083,3.374,1.523,Right,Infield,true,REI_MEX,Verano-2025
+593590.0,593590,"Rivas, Webster",1990-08-08,"6' 1""",6.083,3.374,1.523,Right,First Base,true,LEO_MEX,Verano-2025
+642134.0,642134,"Tenerowicz, Robbie",1995-01-06,"6' 1""",6.083,3.374,1.523,Right,First Base,true,PIR_MEX,Verano-2025
+682841.0,682841,"Robles, Michael",1997-11-10,"6' 1""",6.083,3.374,1.523,Right,Infield,true,BRA_MEX,Verano-2025
+677965.0,677965,"Kerrigan, Jimmy",1994-03-16,"6' 1""",6.083,3.374,1.523,Right,Outfield,true,BRA_MEX,Verano-2025
+621545.0,621545,"Remillard, Zach",1994-02-21,"6' 1""",6.083,3.374,1.523,Right,Second Base,true,LEO_MEX,Verano-2025
+501731.0,501731,"Rosario, Rainel",1989-03-29,"6' 1""",6.083,3.374,1.523,Right,Outfielder,true,DOR_CHI,Verano-2025
+600524.0,600524,"Núñez, Renato",1994-04-04,"6' 1""",6.083,3.374,1.523,Right,Third Base,true,SAR_SAL,Verano-2025
+669222.0,669222,"Senzel, Nick",1995-06-29,"6' 1""",6.083,3.374,1.523,Right,Third Base,true,ROJ_MEX,Verano-2025
+660613.0,660613,"Hernández, Ronaldo",1997-11-11,"6' 1""",6.083,3.374,1.523,Right,Catcher,true,PER_MEX,Verano-2025
+570731.0,570731,"Schoop, Jonathan",1991-10-16,"6' 1""",6.083,3.374,1.523,Right,Second Base,true,VAQ_LAG,Verano-2025
+600971.0,600971,"Santana, Juan",1994-08-16,"6' 1""",6.083,3.374,1.523,Right,Shortstop,true,PER_MEX,Verano-2025
+630034.0,630034,"Rodríguez, David",1996-02-25,"6' 1""",6.083,3.374,1.523,Right,Catcher,true,AGU_VER,Verano-2025
+605101.0,605101,"Quevedo, Yojhan",1993-11-06,"6' 1""",6.083,3.374,1.523,Right,Catcher,true,PER_MEX,Verano-2025
+643524.0,643524,"Schwindel, Frank",1992-06-29,"6' 1""",6.083,3.374,1.523,Right,First Base,true,SAR_SAL,Verano-2025
+663660.0,663660,"Conley, Jack",1997-01-16,"6' 1""",6.083,3.374,1.523,Right,Catcher,true,PIR_MEX,Verano-2025
+688114.0,688114,"DeVine, Drew",1998-06-18,"6' 1""",6.083,3.374,1.523,Right,Shortstop,true,SAR_SAL,Verano-2025
+666371.0,666371,"Trogrlic-Iverson, Nick",1997-10-03,"6' 1""",6.083,3.374,1.523,Right,Pitcher,true,REI_MEX,Verano-2025
+602074.0,602074,"Daza, Yonathan",1994-02-28,"6' 2""",6.167,3.418,1.546,Right,Outfielder,true,GUE_MEX,Verano-2025
+643271.0,643271,"Crook, Narciso",1995-07-12,"6' 2""",6.167,3.418,1.546,Right,Outfield,true,ACE_MEX,Verano-2025
+642721.0,642721,"Gutiérrez, Kelvin",1994-08-28,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,CON_QUE,Verano-2025
+641323.0,641323,"Aviles Jr., Luis",1995-03-16,"6' 2""",6.167,3.418,1.546,Right,Shortstop,true,REI_MEX,Verano-2025
+803376.0,803376,"Camacho, Angel",2000-10-12,"6' 2""",6.167,3.418,1.546,Right,Infield,true,REI_MEX,Verano-2025
+506747.0,506747,"Peña, Francisco",1989-10-12,"6' 2""",6.167,3.418,1.546,Right,Catcher,true,PIR_MEX,Verano-2025
+803165.0,803165,"Medina, Luis",1998-02-16,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,BRA_MEX,Verano-2025
+678323.0,678323,"Cerda, Allan",1999-11-24,"6' 2""",6.167,3.418,1.546,Right,Outfield,true,ACE_MEX,Verano-2025
+649955.0,649955,"Clementina, Hendrik",1997-06-17,"6' 2""",6.167,3.418,1.546,Right,Catcher,true,VAQ_LAG,Verano-2025
+681933.0,681933,"Wielansky, Michael",1997-03-18,"6' 2""",6.167,3.418,1.546,Right,Shortstop,true,CHA_JAL1,Verano-2025
+679007.0,679007,"Franco, Rafael",2001-06-20,"6' 2""",6.167,3.418,1.546,Right,Outfield,true,DOR_CHI,Verano-2025
+624636.0,624636,"Tocci, Carlos",1995-08-23,"6' 2""",6.167,3.418,1.546,Right,Outfielder,true,GEN_MEX,Verano-2025
+592743.0,592743,"Simmons, Andrelton",1989-09-04,"6' 2""",6.167,3.418,1.546,Right,Shortstop,true,DOR_CHI,Verano-2025
+553891.0,553891,"Reginatto, Leonardo",1990-04-10,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,OLM_MEX,Verano-2025
+661541.0,661541,"Casey, Donovan",1996-02-23,"6' 2""",6.167,3.418,1.546,Right,Outfielder,true,SUL_MON,Verano-2025
+665836.0,665836,"Pinero, Antonio",1999-03-15,"6' 2""",6.167,3.418,1.546,Right,Shortstop,true,LEO_MEX,Verano-2025
+690527.0,690527,"Broughton, Josh",1997-07-22,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,PIR_MEX,Verano-2025
+655996.0,655996,"Santana, Cristian",1997-02-24,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,AGU_VER,Verano-2025
+572228.0,572228,"Voit, Luke",1991-02-13,"6' 2""",6.167,3.418,1.546,Right,First Base,true,TIG_QUI,Verano-2025
+602112.0,602112,"Reyes, Alfredo",1993-10-04,"6' 2""",6.167,3.418,1.546,Right,Shortstop,true,ACE_MEX,Verano-2025
+686781.0,686781,"Lewis, Brandon",1998-10-23,"6' 2""",6.167,3.418,1.546,Right,Third Base,true,GEN_MEX,Verano-2025
+832716.0,832716,"Torres, Raul",2004-02-19,"6' 2""",6.167,3.418,1.546,Right,Catcher,true,PIR_MEX,Verano-2025
+622660.0,622660,"Richardson, Denzel",1994-01-07,"6' 2""",6.167,3.418,1.546,Right,Outfielder,true,ROJ_MEX,Verano-2025
+665890.0,665890,"Matias, Seuly",1998-09-04,"6' 3""",6.25,3.463,1.568,Right,Outfield,true,DOR_CHI,Verano-2025
+473242.0,473242,"Murillo, Agustin",1982-05-05,"6' 3""",6.25,3.463,1.568,Right,Third Base,true,DOR_CHI,Verano-2025
+515768.0,515768,"Fuenmayor, Balbino",1989-11-26,"6' 3""",6.25,3.463,1.568,Right,First Base,true,ACE_MEX,Verano-2025
+688023.0,688023,"Camacho, Angel",1997-06-13,"6' 3""",6.25,3.463,1.568,Right,Third Base,true,REI_MEX,Verano-2025
+665560.0,665560,"Ortiz, Jhailyn",1998-11-18,"6' 3""",6.25,3.463,1.568,Right,Outfielder,true,ACE_MEX,Verano-2025
+573669.0,573669,"Rodríguez, Aderlin",1991-11-18,"6' 3""",6.25,3.463,1.568,Right,Third Base,true,TOR_TIJ,Verano-2025
+543874.0,543874,"Vargas, Jose",1987-12-15,"6' 3""",6.25,3.463,1.568,Right,First Base,true,CON_QUE,Verano-2025
+672653.0,672653,"Infante, Diego",1999-10-22,"6' 3""",6.25,3.463,1.568,Right,Outfield,true,ROJ_MEX,Verano-2025
+606143.0,606143,"Mejia, Alejandro",1993-03-10,"6' 4""",6.333,3.508,1.591,Right,Third Base,true,DOR_CHI,Verano-2025
+657598.0,657598,"Gotta, Cade",1991-08-01,"6' 4""",6.333,3.508,1.591,Right,Outfield,true,ROJ_MEX,Verano-2025
+515189.0,515189,"Amador, Japhet",1987-01-19,"6' 4""",6.333,3.508,1.591,Right,First Base,true,DIA_ROJ,Verano-2025
+660630.0,660630,"Cuadrado, Romer",1997-09-12,"6' 4""",6.333,3.508,1.591,Right,Outfielder,true,SAR_SAL,Verano-2025
+660639.0,660639,"Gonzalez, Pedro",1997-10-27,"6' 5""",6.417,3.552,1.613,Right,Outfielder,true,ACE_MEX,Verano-2025
+689659.0,689659,"Hernandez, Ryan",1998-10-15,"6' 5""",6.417,3.552,1.613,Right,First Base,true,DOR_CHI,Verano-2025
+682073.0,682073,"Hensley, David",1996-03-28,"6' 6""",6.5,3.597,1.636,Right,Outfield,true,OLM_MEX,Verano-2025
+836017.0,836017,"Alonso, Alan",1998-05-29,N/A,0.0,3.5750330000000003,1.425,Right,Infield,true,GEN_MEX,Verano-2025
+835166.0,835166,"Hernández, Valentin",2002-07-04,N/A,0.0,3.5750330000000003,1.425,Right,Outfield,true,VAQ_LAG,Verano-2025
+828711.0,828711,"Rivera, Alejandro",2005-12-16,N/A,0.0,3.5750330000000003,1.425,Right,Catcher,true,GEN_MEX,Verano-2025
+466988.0,466988,"Bonifácio, Emilio",1985-04-23,"5' 10""",5.833,3.24,1.456,Switch,Second Base,true,GUE_MEX,Verano-2025
+501659.0,501659,"Almonte, Abraham",1989-06-27,"5' 10""",5.833,3.24,1.456,Switch,Outfield,true,GUE_MEX,Verano-2025
+642686.0,642686,"Martinez, Jose",1996-08-15,"5' 10""",5.833,3.24,1.456,Switch,Shortstop,true,ROJ_MEX,Verano-2025
+594694.0,594694,"Difo, Wilmer",1992-04-02,"5' 10""",5.833,3.24,1.456,Switch,Shortstop,true,LEO_MEX,Verano-2025
+631222.0,631222,"Cruz, Michael De La",1993-05-15,"5' 10""",5.833,3.24,1.456,Switch,Catcher,true,GUE_MEX,Verano-2025
+607733.0,607733,"Stankiewicz, Drew",1993-06-18,"5' 10""",5.833,3.24,1.456,Switch,Second Base,true,CHA_JAL1,Verano-2025
+600902.0,600902,"Garcia, Wilson",1994-01-11,"5' 10""",5.833,3.24,1.456,Switch,First Base,true,AGU_VER,Verano-2025
+672544.0,672544,"Izturis Jr., Cesar",1999-11-11,"5' 11""",5.917,3.285,1.478,Switch,Shortstop,true,TOR_TIJ,Verano-2025
+455369.0,455369,"Pena, Ramiro",1985-07-18,"5' 11""",5.917,3.285,1.478,Switch,Third Base,true,SUL_MON,Verano-2025
+500208.0,500208,"Solarte, Yangervis",1987-07-03,"5' 11""",5.917,3.285,1.478,Switch,Third Base,true,LEO_MEX,Verano-2025
+622666.0,622666,"Camargo, Johan",1993-12-13,"5' 11""",5.917,3.285,1.478,Switch,Third Base,true,ROJ_MEX,Verano-2025
+542436.0,542436,"Adames, Cristhian",1991-07-26,"5' 11""",5.917,3.285,1.478,Switch,Shortstop,true,PER_MEX,Verano-2025
+542454.0,542454,"Santana, Danny",1990-11-07,"5' 11""",5.917,3.285,1.478,Switch,Outfield,true,GUE_MEX,Verano-2025
+678807.0,678807,"Santiago, Carlos",2001-07-24,"5' 11""",5.917,3.285,1.478,Switch,Shortstop,true,AGU_VER,Verano-2025
+800096.0,800096,"Nunez, Aldo",2001-04-23,"5' 6""",5.5,3.062,1.366,Switch,Second Base,true,ACE_MEX,Verano-2025
+697779.0,697779,"Robledo, Jose",2003-09-14,"5' 7""",5.583,3.106,1.388,Switch,Shortstop,true,CON_QUE,Verano-2025
+542513.0,542513,"Telis, Tomás",1991-06-18,"5' 8""",5.667,3.151,1.411,Switch,Catcher,true,TOR_TIJ,Verano-2025
+544725.0,544725,"García, Leury",1991-03-18,"5' 8""",5.667,3.151,1.411,Switch,Outfield,true,LEO_MEX,Verano-2025
+624221.0,624221,"Figueroa, Carlos",1992-04-10,"5' 8""",5.667,3.151,1.411,Switch,Outfielder,true,LEO_MEX,Verano-2025
+642736.0,642736,"Leyba, Domingo",1995-09-11,"5' 8""",5.667,3.151,1.411,Switch,Shortstop,true,OLM_MEX,Verano-2025
+541608.0,541608,"Cabrera, Ramón",1989-11-05,"5' 8""",5.667,3.151,1.411,Switch,Catcher,true,SUL_MON,Verano-2025
+642336.0,642336,"Mejía, Francisco",1995-10-27,"5' 8""",5.667,3.151,1.411,Switch,Catcher,true,DIA_ROJ,Verano-2025
+605011.0,605011,"Gutierrez, Moises",1994-11-19,"5' 9""",5.75,3.195,1.433,Switch,Second Base,true,DIA_ROJ,Verano-2025
+642344.0,642344,"Nuñez, Jhon",1994-12-05,"5' 9""",5.75,3.195,1.433,Switch,Catcher,true,BRA_MEX,Verano-2025
+680932.0,680932,"Martinez, Pedro",2001-01-28,"5' 9""",5.75,3.195,1.433,Switch,Shortstop,true,REI_MEX,Verano-2025
+692473.0,692473,"Escarrega, Christopher",1999-07-17,"5' 9""",5.75,3.195,1.433,Switch,Catcher,true,SUL_MON,Verano-2025
+670870.0,670870,"Severino, Yunior",1999-10-03,"6' 0""",6.0,3.329,1.501,Switch,First Base,true,OLM_MEX,Verano-2025
+592656.0,592656,"Ramos, Henry",1992-04-15,"6' 0""",6.0,3.329,1.501,Switch,Outfielder,true,LEO_MEX,Verano-2025
+660620.0,660620,"Araúz, Jonathan",1998-08-03,"6' 0""",6.0,3.329,1.501,Switch,Second Base,true,SAR_SAL,Verano-2025
+542340.0,542340,"Villar, Jonathan",1991-05-02,"6' 0""",6.0,3.329,1.501,Switch,Second Base,true,VAQ_LAG,Verano-2025
+802888.0,802888,"Marquez, Victor",2001-12-21,"6' 0""",6.0,3.329,1.501,Switch,Infield,true,GEN_MEX,Verano-2025
+501660.0,501660,"Almonte, Zoilo",1989-06-10,"6' 0""",6.0,3.329,1.501,Switch,Outfielder,true,SUL_MON,Verano-2025
+689567.0,689567,"Yanez, Hernan",1999-01-04,"6' 0""",6.0,3.329,1.501,Switch,Catcher,true,DOR_CHI,Verano-2025
+670582.0,670582,"Gonzalez, Yariel",1994-06-01,"6' 1""",6.083,3.374,1.523,Switch,Third Base,true,GUE_MEX,Verano-2025
+650958.0,650958,"León, Michael De",1997-01-14,"6' 1""",6.083,3.374,1.523,Switch,Third Base,true,LEO_MEX,Verano-2025
+603877.0,603877,"Flores, Fernando",1991-08-21,"6' 1""",6.083,3.374,1.523,Switch,Catcher,true,ACE_MEX,Verano-2025
+642299.0,642299,"Flores, Alejandro",1995-12-27,"6' 1""",6.083,3.374,1.523,Switch,Catcher,true,CON_QUE,Verano-2025
+656462.0,656462,"Gilliam, Isiah",1996-07-23,"6' 1""",6.083,3.374,1.523,Switch,Outfield,true,GEN_MEX,Verano-2025
+811373.0,811373,"Castaneda, Gerardo",1999-05-12,"6' 3""",6.25,3.463,1.568,Switch,Catcher,true,PER_MEX,Verano-2025
+573627.0,573627,"Vargas, Kennys",1990-08-01,"6' 5""",6.417,3.552,1.613,Switch,First Base,true,ACE_MEX,Verano-2025

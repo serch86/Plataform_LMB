@@ -1,0 +1,85 @@
+# Plan de Trabajo Organizado
+
+## Fase 1 – Preparación inicial
+
+- Convertir notebooks a scripts Python.
+- Eliminar temporalmente PDF.
+- Crear clase `Tools` con métodos para cargar Excel, extraer y mostrar nombres.
+- Encapsular funciones dentro de `Tools`.
+
+## Fase 2 – Procesamiento de datos
+
+- Limpiar y normalizar nombres (minúsculas, quitar espacios y caracteres especiales).
+- Extraer nombres desde OCR Trackman y base oficial.
+- Implementar función `normalizar_nombre(nombre: str) -> str`.
+
+## Fase 3 – Empate y validación
+
+- Comparar listas OCR y base oficial usando difflib (por ahora).
+- Separar coincidencias altas y sin coincidencia.
+- Mostrar resumen y listado por grupo.
+- Implementar función `comparar_nombres(lista_ocr, lista_oficial)`.
+
+## Fase 4 – Automatización
+
+- Procesar nombres validados automáticamente.
+- Marcar el resto para revisión manual.
+- Implementar función `procesar_validos(df_validos)`.
+
+---
+
+## Diseño y multiusuario
+
+- Agregar logos y marcos por equipo.
+- Detectar equipo por usuario o archivo.
+- Guardar logos en `/assets/logos/{equipo}.png`.
+
+## Almacenamiento en la nube (Google Cloud)
+
+- Procesar archivos en memoria, no guardar localmente.
+- Subir a Google Cloud Storage después del procesamiento.
+- Organizar ruta como: `bucket/correo_usuario/nombre_archivo.xlsx`.
+- Implementar función `subir_a_gcs(archivo, usuario_email)`.
+
+## Impresión estilo Trackman
+
+- Mostrar nombre en formato `Apellido, Nombre`.
+- Texto editable en PDF o tabla.
+- Implementar función `formato_trackman(nombre_completo: str) -> str`.
+
+---
+
+## Estrategia de coincidencia de nombres (pendiente)
+
+- Normalizar nombres en backend (minúsculas, sin comas).
+- Estrategia combinada:
+  - Filtrado por tokens (mínimo dos tokens iguales).
+  - Similitud global con difflib (umbral 90%).
+- Mostrar en frontend `.title` con sección y algoritmo usado con similitud.
+- Iterar para mejorar extracción de PDF, todo en un mismo notebook.
+
+---
+
+## Mejoras específicas
+
+- En Excel, si detecta columna `cuerpo técnico` (última), detener búsqueda de secciones posteriores.
+- Soporte futuro para fuentes y estilos por equipo (solo planificar).
+- Adaptar scripts Python actuales para backend y Node.js.
+- Contexto `create_reports` y `baters_tools`:
+  - Generan reportes con datos filtrados y limpiados.
+  - Crean imágenes y concatenan PDF final.
+  - OCR enfocado en pitchers (batters omitidos por ahora).
+
+---
+
+## Pruebas frontend
+
+- Probar con archivos Excel.
+- Mostrar coincidencias en frontend sin tomar captura.
+- Enviar búsqueda con coincidencias al backend.
+
+## Sincronización y entrega
+
+- Adecuar `teacher_tools` y `create_reports` juntos.
+- Enviar código a master mañana.
+- Junta de revisión viernes.

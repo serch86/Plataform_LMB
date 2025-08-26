@@ -1,0 +1,37 @@
+# Ignorar node_modules
+backend/node_modules/
+frontend/node_modules/
+
+# Ignorar entornos virtuales
+backend/venv/
+backend/back*app_baseball/env/
+Python/__pycache__/
+
+# Ignorar archivos de configuración sensibles
+backend/.env
+docs/client_secret.json
+
+# Ignorar carpetas temporales y de configuración local
+frontend/.vscode/
+frontend/.expo/# Ignorar node_modules
+backend/node_modules/
+frontend/node_modules/
+
+# Ignorar entornos virtuales
+backend/venv/
+backend/back*app_baseball/env/
+Python/__pycache__/
+
+# Ignorar archivos de configuración sensibles
+backend/.env
+docs/client_secret.json
+
+# Ignorar carpetas temporales y de configuración local
+frontend/.vscode/
+frontend/.expo/
+backend/uploads/
+backend/temp_docs/
+
+# Reportes Generados
+/home/yael/Desktop/proyectos_web/Plataform_LMB/backend/BaseballBatterPitcherReports/Batter
+backend/services/python_scripts/venv/

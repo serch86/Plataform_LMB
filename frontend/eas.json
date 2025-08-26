@@ -1,0 +1,22 @@
+{
+  "build": {
+    "development": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://192.168.100.8:3000/api",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "tu-client-id-dev"
+      }
+    },
+    "staging": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://staging.tu-dominio.com/api",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "tu-client-id-staging"
+      }
+    },
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://tu-dominio.com/api",
+        "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "tu-client-id-prod"
+      }
+    }
+  }
+}
