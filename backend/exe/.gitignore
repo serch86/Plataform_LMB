@@ -1,0 +1,25 @@
+# Ignorar entornos virtuales
+.venv/
+venv/
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de compilación
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+dist/
+*.spec
+
+# Configuración local
+.env
